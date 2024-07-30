@@ -1,0 +1,15 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    
+    gap: 5rem;
+}
+
+.small-container {
+    max-width: 945px;
+    margin: 0 auto;
+}
+
+.img-fill {
+    width: -webkit-fill-available;
+}
