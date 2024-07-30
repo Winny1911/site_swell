@@ -7,18 +7,21 @@
     text-align: left;
     overflow: hidden;
     position: relative;
-  }
-  
-  .row {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
-    margin: 3rem 0;
-    position: relative;
-    white-space: nowrap;
 }
   
+.row {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+  margin: 3rem 0;
+  position: relative;
+}
+
+  .white-space {
+    white-space: nowrap;
+  }
+
   .client-image {
     width: 20%;
     transition: transform 0.3s;

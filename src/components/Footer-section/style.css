@@ -58,3 +58,28 @@ footer hr {
     font-family: 'HKGrotesk-Light', sans-serif;
     color: #1A1449 !important;
 }
+
+@media screen and (max-width: 760px) {
+    .terms-and-socials {
+        flex-direction: column;
+    }    
+    .padding-right {
+        padding-right: unset;
+    }
+    .col-6 {
+        width: 100%;
+    }
+    .icon-color {
+        justify-content: center;
+    }
+    .col-4 {
+        width: 100%;
+    }
+    .small-screen {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+    }
+}

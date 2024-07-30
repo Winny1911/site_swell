@@ -54,7 +54,7 @@ const NavigationMenu = () => {
 
       <div className={`side-menu ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><a href="#inicio">Início</a></li>
+          <li><Link to="/inicio">Início</Link></li>
           <li><Link to="/about">A Swell</Link></li>
           <li><a href="#wavestudio">Wave Studio</a></li>
           <li><a href="#cases">Cases</a></li>

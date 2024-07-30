@@ -28,6 +28,13 @@
     flex: 1;
 }
 
+.flex-adjust {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .discovery-section button {
     padding: 2px 16px;
 }
@@ -80,7 +87,6 @@
     
     .wave-studio {
         flex: 1;
-        max-width: 50%; 
         margin-right: 2rem;
     }
 

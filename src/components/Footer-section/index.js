@@ -7,19 +7,23 @@ import './style.css'
 const Footer = () => {
   return (
     <footer>
-      <div className="row">
+      <div className="row terms-and-socials">
         <div className="col-4">
           <img src={LogoFooter} alt="Logo" className='w-100' />
         </div>
         <div className="col-4 d-flex justify-content-center pt-lg">
-          <ul className='list-hk-darkblue'>
-            <li><a href="#">Início</a></li>
-            <li><a href="#">A Swell</a></li>
-            <li><a href="#">Wave Stúdio</a></li>
-            <li><a href="#">Soluções e Cases</a></li>
-            <li><a href="#">Clientes</a></li>
-            <li><a href="#">Feedbacks</a></li>
-            <li><a href="#">Contato</a></li>
+          <ul className='list-hk-darkblue small-screen'>
+            <div>
+              <li><a href="#">Início</a></li>
+              <li><a href="#">A Swell</a></li>
+              <li><a href="#">Wave Studio</a></li>
+              <li><a href="#">Wave AI</a></li>
+            </div>
+            <div>
+              <li><a href="#">Wave Payments</a></li>
+              <li><a href="#">Cases Swell</a></li>
+              <li><a href="#">Perfil</a></li>
+            </div>
           </ul>
         </div>
         <div className="col-4 pt-lg no-margin">
@@ -35,7 +39,7 @@ const Footer = () => {
         </div>
       </div>
       <hr style={{ borderTop: '2px solid white' }} />
-      <div className="row">
+      <div className="row terms-and-socials">
         <div className="col-6 d-flex gap-6 font-color">
           <p style={{ fontSize: '12px' }}>Política de Privacidade</p>
           <p style={{ fontSize: '12px' }}>Termos e Condições</p>

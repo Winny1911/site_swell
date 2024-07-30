@@ -15,19 +15,25 @@ const SecondSection = () => {
       </div>
 
       <div className="section-wrapper">
-        <div className="section discovery-section">
-          <h2>DISCOVERY</h2>
-          <p>Desde a compreensão do contexto até a definição de objetivos, KPIs, personas, protótipos, e roadmap, garantindo soluções relevantes e eficazes.</p>
+        <div className="section discovery-section flex-adjust">
+          <div>
+            <h2>DISCOVERY</h2>
+            <p>Desde a compreensão do contexto até a definição de objetivos, KPIs, personas, protótipos, e roadmap, garantindo soluções relevantes e eficazes.</p>
+          </div>
           <button className="see-more">VER MAIS</button>
         </div>
-        <div className="section discovery-section">
-          <h2>TECH</h2>
-          <p>Expertise tecnológica e parceria estratégica para impulsionar a inovação, estabilidade e transformação digital em todas as fases do ciclo de vida do software.</p>
+        <div className="section discovery-section flex-adjust">
+          <div>
+            <h2>TECH</h2>
+            <p>Expertise tecnológica e parceria estratégica para impulsionar a inovação, estabilidade e transformação digital em todas as fases do ciclo de vida do software.</p>
+          </div>
           <button className="see-more">VER MAIS</button>
         </div>
-        <div className="section discovery-section">
-          <h2>BUSINESS</h2>
-          <p>Soluções fundamentais para aprimoramento contínuo. Catalisadores da transformação dos processos de negócios, garantindo resultados mensuráveis e duradouros.</p>
+        <div className="section discovery-section flex-adjust">
+          <div>
+            <h2>BUSINESS</h2>
+            <p>Soluções fundamentais para aprimoramento contínuo. Catalisadores da transformação dos processos de negócios, garantindo resultados mensuráveis e duradouros.</p>
+          </div>
           <button className="see-more">VER MAIS</button>
         </div>
       </div>
