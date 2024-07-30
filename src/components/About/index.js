@@ -17,7 +17,7 @@ const About = () => {
             "
         </div>
 
-        <div className="section-wrapper">
+        <div className="section-wrapper section-width">
             <img src={SwellFlux} className="container small-container gap-0" alt="swell-flux" />
         </div>
 
