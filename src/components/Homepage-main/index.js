@@ -11,9 +11,7 @@ import BoasVindasVideo from '../../assets/BoasVindasVideo.mp4'
 const HomepageMain = () => {
   return (
     <>
-      {/* <img src={BoasVindas} class="img-fill" alt="Welcome gif"/> */}
-
-      <video className="video-fill" autoPlay muted loop>
+      <video className="video-fill webkit-fill" autoPlay muted loop>
         <source src={BoasVindasVideo} type="video/mp4" />
         Your browser does not support the video tag.
       </video>

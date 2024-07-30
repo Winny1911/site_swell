@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './style.css';
 import logo from '../../assets/images/logo.png';
 import openMenuIcon from '../../assets/images/menu-blue-icon.png';
@@ -54,7 +55,7 @@ const NavigationMenu = () => {
       <div className={`side-menu ${menuOpen ? 'active' : ''}`}>
         <ul>
           <li><a href="#inicio">Início</a></li>
-          <li><a href="#aswell">A Swell</a></li>
+          <li><Link to="/about">A Swell</Link></li>
           <li><a href="#wavestudio">Wave Studio</a></li>
           <li><a href="#cases">Cases</a></li>
           <li><a href="#paymenthub">Payment Hub</a></li>

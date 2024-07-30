@@ -13,3 +13,7 @@
 .img-fill {
     width: -webkit-fill-available;
 }
+
+.webkit-fill {
+    width: -webkit-fill-available;
+}

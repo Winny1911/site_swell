@@ -21,16 +21,14 @@
 }
 
 .section-wrapper h2 {
-    color: #034F78ff;
+    color: #1a1449;
 }
 
 .section {
     flex: 1;
-    margin: 0 10px; 
 }
 
 .discovery-section button {
-    margin-top: 21px;
     padding: 2px 16px;
 }
 

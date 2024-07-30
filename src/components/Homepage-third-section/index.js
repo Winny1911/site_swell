@@ -8,7 +8,7 @@ const ThirdSection = () => {
       <div className="">
         <img className="case-width" src={CaseFull} alt='case de clientes' />
       </div>
-      <button className="know-button">VER COMPLETO</button>
+      <button className="know-button">SAIBA MAIS</button>
     </div>
   );
 }
