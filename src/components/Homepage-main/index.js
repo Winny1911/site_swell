@@ -6,7 +6,6 @@ import ThirdSection from '../Homepage-third-section';
 import FourthSection from '../Homepage-fourth-section';
 import FifthSection from '../Homepage-fifth-section';
 import SixthSection from '../Homepage-sixth-section';
-import BoasVindas from '../../assets/images/boas-vindas.gif'
 import BoasVindasVideo from '../../assets/BoasVindasVideo.mp4'
 
 const HomepageMain = () => {
