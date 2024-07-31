@@ -6,6 +6,7 @@ import HomepageMain from './components/Homepage-main';
 import NavigationMenu from './components/NavigationMenu';
 import BackToTopButton from './components/ScrollToTop';
 import About from './components/About';
+import CareerPage from './components/Careers-page';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<HomepageMain />} />
           <Route path="/about" element={<About />} />
+          <Route path="/carreira" element={<CareerPage />} />
         </Routes>
         <Footer />
         <BackToTopButton />

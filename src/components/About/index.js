@@ -11,7 +11,7 @@ const About = () => {
             Your browser does not support the video tag.
         </video>
 
-        <div className="container small-container gap-0 pt-5 pt-5">
+        <div className="container small-container gap-0 pt-5 pt-5 text-align-center">
             "          
                 <p>Com mais de 20 anos de experiência, cultivamos uma comunidade de talentos diversos, impulsionada pela inovação e dedicada a fornecer soluções personalizadas. Nossa jornada tecnológica é marcada pela contínua evolução, onde cada avanço nos leva mais perto do amanhã.</p>
             "

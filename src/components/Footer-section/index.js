@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import LogoFooter from '../../assets/images/logo-footer.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faInstagram, faXTwitter, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
@@ -32,9 +33,9 @@ const Footer = () => {
                 <p className='font-color'>PALHOÇA - SANTA CATARINA</p>
             </div>
             <div className="pt-lg">
-                <p className='font-color'>Procuramos pessoas talentosas e</p>
-                <p className='font-color'>apaixonadas para se juntar à equipe.</p>
-                <p>Carreiras Swell</p>
+              <p className='font-color'>Procuramos pessoas talentosas e</p>
+              <p className='font-color'>apaixonadas para se juntar à equipe.</p>
+              <Link to="/carreira">Carreiras Swell</Link>
             </div>
         </div>
       </div>
