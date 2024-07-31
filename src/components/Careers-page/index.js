@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import bannerCarreira from '../../assets/images/carreira-swell-banner.png'
+import bannerCarreira from '../../assets/images/background-jobs.svg'
 import "./career-style.css"
-import "./style_work.css"
+import "../Careers-page/style_work.css"
 
 const loadScript = (src, type = 'text/javascript', defer = true) => {
     return new Promise((resolve, reject) => {
@@ -72,7 +72,7 @@ const CareerPage = () => {
             if (container) {
 
         container.innerHTML = `
-        <section class="section section-lg bg-default" id="nossas_vagas">
+        <section class="career-page-wrapper section section-lg bg-default" id="nossas_vagas">
             <div class="container">
                 <div class="accordion" id="accordionExample">
                     <div class="card">
@@ -2019,7 +2019,13 @@ const CareerPage = () => {
 
     return (
     <>
-        <img src={bannerCarreira} className="w-100" alt="carreiras swell"/>
+        <div className="banner-container">
+        <img src={bannerCarreira} className="banner-image" alt="carreiras swell" />
+            <div className="banner-text">
+                <h2 className="banner-title">Carreiras Swell</h2>
+                <span className="banner-subtitle">Surfe as Melhores Oportunidades com a Swell.</span>
+            </div>
+        </div>
 
         <div id="dynamic-content" />
 

@@ -67,17 +67,6 @@
   --bs-highlight-bg: #fff3cd;
 }
 
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  :root {
-    scroll-behavior: smooth;
-  }
-}
 
 .accordion {
   --bs-accordion-color: var(--bs-body-color);
@@ -320,26 +309,82 @@
   background: #bbb;
 }
 
-.col-1,.col-2,.col-3, .col-4, .col-5,
-.col-6, .col-7, .col-8, .col-9, .col-10,
-.col-11, .col-12, .col, .col-auto, .col-sm-1,
-.col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5,
-.col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9,
-.col-sm-10, .col-sm-11, .col-sm-12, .col-sm, .col-sm-auto,
-.col-md-1, .col-md-2, .col-md-3, .col-md-4,
-.col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9,
-.col-md-10, .col-md-11, .col-md-12, .col-md, .col-md-auto,
-.col-lg-1, .col-lg-2, .col-lg-3, .col-lg-4, .col-lg-5,
-.col-lg-6, .col-lg-7, .col-lg-8, .col-lg-9, .col-lg-10,
-.col-lg-11, .col-lg-12, .col-lg, .col-lg-auto, .col-xl-1,
-.col-xl-2, .col-xl-3, .col-xl-4, .col-xl-5, .col-xl-6,
-.col-xl-7, .col-xl-8, .col-xl-9, .col-xl-10, .col-xl-11,
-.col-xl-12, .col-xl, .col-xl-auto {
+.career-page-wrapper .col-1,
+.career-page-wrapper .col-2,
+.career-page-wrapper .col-3,
+.career-page-wrapper .col-4,
+.career-page-wrapper .col-5,
+.career-page-wrapper .col-6,
+.career-page-wrapper .col-7,
+.career-page-wrapper .col-8,
+.career-page-wrapper .col-9,
+.career-page-wrapper .col-10,
+.career-page-wrapper .col-11,
+.career-page-wrapper .col-12,
+.career-page-wrapper .col,
+.career-page-wrapper .col-auto,
+.career-page-wrapper .col-sm-1,
+.career-page-wrapper .col-sm-2,
+.career-page-wrapper .col-sm-3,
+.career-page-wrapper .col-sm-4,
+.career-page-wrapper .col-sm-5,
+.career-page-wrapper .col-sm-6,
+.career-page-wrapper .col-sm-7,
+.career-page-wrapper .col-sm-8,
+.career-page-wrapper .col-sm-9,
+.career-page-wrapper .col-sm-10,
+.career-page-wrapper .col-sm-11,
+.career-page-wrapper .col-sm-12,
+.career-page-wrapper .col-sm,
+.career-page-wrapper .col-sm-auto,
+.career-page-wrapper .col-md-1,
+.career-page-wrapper .col-md-2,
+.career-page-wrapper .col-md-3,
+.career-page-wrapper .col-md-4,
+.career-page-wrapper .col-md-5,
+.career-page-wrapper .col-md-6,
+.career-page-wrapper .col-md-7,
+.career-page-wrapper .col-md-8,
+.career-page-wrapper .col-md-9,
+.career-page-wrapper .col-md-10,
+.career-page-wrapper .col-md-11,
+.career-page-wrapper .col-md-12,
+.career-page-wrapper .col-md,
+.career-page-wrapper .col-md-auto,
+.career-page-wrapper .col-lg-1,
+.career-page-wrapper .col-lg-2,
+.career-page-wrapper .col-lg-3,
+.career-page-wrapper .col-lg-4,
+.career-page-wrapper .col-lg-5,
+.career-page-wrapper .col-lg-6,
+.career-page-wrapper .col-lg-7,
+.career-page-wrapper .col-lg-8,
+.career-page-wrapper .col-lg-9,
+.career-page-wrapper .col-lg-10,
+.career-page-wrapper .col-lg-11,
+.career-page-wrapper .col-lg-12,
+.career-page-wrapper .col-lg,
+.career-page-wrapper .col-lg-auto,
+.career-page-wrapper .col-xl-1,
+.career-page-wrapper .col-xl-2,
+.career-page-wrapper .col-xl-3,
+.career-page-wrapper .col-xl-4,
+.career-page-wrapper .col-xl-5,
+.career-page-wrapper .col-xl-6,
+.career-page-wrapper .col-xl-7,
+.career-page-wrapper .col-xl-8,
+.career-page-wrapper .col-xl-9,
+.career-page-wrapper .col-xl-10,
+.career-page-wrapper .col-xl-11,
+.career-page-wrapper .col-xl-12,
+.career-page-wrapper .col-xl,
+.career-page-wrapper .col-xl-auto {
   position: relative;
   width: 100%;
   padding-right: 0;
   padding-left: 0;
 }
+
 
 #tamanhoExcedido {
   color: red;
