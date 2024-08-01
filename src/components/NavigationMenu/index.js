@@ -57,8 +57,10 @@ const NavigationMenu = () => {
           <li><Link to="/">Início</Link></li>
           <li><Link to="/about">A Swell</Link></li>
           <li><a href="#wavestudio">Wave Studio</a></li>
-          <li><a href="#cases">Cases</a></li>
-          <li><a href="#paymenthub">Payment Hub</a></li>
+          <li><a href="#wavestudio">Wave AI</a></li>
+          <li><Link to="/payments">Wave Payments</Link></li>
+          <li><a href="#cases">Cases Swell</a></li>
+          <li><a href="#paymenthub">Carreiras Swell</a></li>
           <li><a href="#perfil">Perfil</a></li>
         </ul>
       </div>

@@ -14,5 +14,12 @@
     cursor: pointer;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     font-size: 20px;
-    transition: background-color 0.3s;
+    transition: opacity 0.3s, visibility 0.3s;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
 }
