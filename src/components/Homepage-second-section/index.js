@@ -6,7 +6,7 @@ const SecondSection = () => {
   return (
     <div className="second-section">
       <div className="wave-studio container small-container">
-          <h2>Wave Studio</h2>
+          <h2 className='blue-title '>Wave Studio</h2>
         <div className='wave-studio-container'>
           <p>Reunimos a expertise de nossos profissionais para criar uma equipe multidisciplinar que tem como pilares a cultura ágil, a customização de processos e a capacidade de geração de valor. Nosso foco é promover a melhoria contínua e oferecer soluções de negócios únicas para o mercado, agregando qualidade aos produtos e serviços digitais de nossos clientes.</p>
           <img  src={WaveStudio} alt="circulo contendo qualidades da wave studio"/>

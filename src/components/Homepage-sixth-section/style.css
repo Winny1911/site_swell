@@ -8,6 +8,10 @@
     font-size: 1.625rem;
 }
 
+.text-underline {
+    text-decoration: underline;
+}
+
 .contact-form {
     padding: 0 15.5rem;
     display: flex;
@@ -42,6 +46,7 @@
     align-self: end;
     background-color: #201046ff;
     border-radius: 10px;
+    border: none;
     padding: 4px 75px;
     font-weight: bold;
     font-size: 16px;

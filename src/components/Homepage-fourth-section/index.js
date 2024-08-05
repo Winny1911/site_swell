@@ -19,7 +19,7 @@ const FourthSection = () => {
 
   return (
     <div className="fourth-section">
-      <h2>Clientes</h2>
+      <h2 className='blue-title '>Clientes</h2>
       {rows.map((rowImages, rowIndex) => (
         <div
           key={rowIndex}

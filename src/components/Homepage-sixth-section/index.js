@@ -39,7 +39,7 @@ const SixthSection = () => {
       </form>
       <p className="small-text">
         O Controlador dos dados pessoais é a Swell IT Solutions. Os dados inseridos no formulário serão processados única e exclusivamente para manter contato. <br/>
-        Você pode retirar qualquer o consentimento dado a qualquer momento. Para obter informações adicionais ou para exercer os seus direitos, visite o aviso de privacidade. <br/>
+        Você pode retirar qualquer o consentimento dado a qualquer momento. Para obter informações adicionais ou para exercer os seus direitos, visite o <a className="text-underline" href="https://swellitsolutions.com.br/politica_privacidade" target="_blank" rel="noopener noreferrer">aviso de privacidade</a>. <br/>
         A Swell não utiliza informações de contato para enviar qualquer tipo de SPAM.
       </p>
     </div>

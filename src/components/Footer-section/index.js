@@ -47,7 +47,7 @@ const Footer = () => {
           <p style={{ fontSize: '12px' }}>Política de Cookies</p>
         </div>
         <div className="col-6 icon-color font-color padding-right" style={{ textAlign: 'right' }}>
-        <FontAwesomeIcon icon={faInstagram} size="lg" />
+          <FontAwesomeIcon icon={faInstagram} size="lg" />
           <FontAwesomeIcon icon={faXTwitter} size="lg" />
           <FontAwesomeIcon icon={faLinkedin} size="lg" />
           <FontAwesomeIcon icon={faYoutube} size="lg" />
