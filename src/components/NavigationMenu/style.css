@@ -22,6 +22,10 @@
   cursor: pointer;
 }
 
+.white-logo {
+  width: 60px;
+}
+
 .side-menu {
   position: fixed;
   top: 0;

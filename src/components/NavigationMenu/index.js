@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import './style.css';
 import logo from '../../assets/images/logo.png';
+import whiteLogo from '../../assets/images/white-logo.png';
 import openMenuIcon from '../../assets/images/menu-blue-icon.png';
 import closedMenuIcon from '../../assets/images/menu-black-icon.png';
 import openLanguageIcon from '../../assets/images/language-blue-icon.png';
@@ -14,6 +15,8 @@ import jpFlag from '../../assets/images/japan-flag.svg';
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+
+  const location = useLocation();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -29,9 +32,12 @@ const NavigationMenu = () => {
     }
   };
 
+  const currentLogo = location.pathname === '/payments' ? whiteLogo : logo;
+  const logoClassName = location.pathname === '/payments' ? 'white-logo' : 'default-logo';
+
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
-      <img src={logo} className="icons" alt="Logo" />
+      <img src={currentLogo} className={`icons ${logoClassName}`} alt="Logo" />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
         <div onClick={toggleLanguageMenu} className={`language-menu-trigger ${languageMenuOpen ? 'move-left' : ''}`}>
