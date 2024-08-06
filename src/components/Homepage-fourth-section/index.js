@@ -3,15 +3,12 @@ import './style.css';
 import images from '../../assets/images/clientes-home/clientes.js';
 
 const FourthSection = () => {
-  // State to manage hover status for each row
   const [hoveredRow, setHoveredRow] = useState(null);
 
-  // Function to determine the sliding direction based on row index
   const getRowDirection = (index) => {
     return index % 2 === 0 ? 'slide-right' : 'slide-left';
   };
 
-  // Split images into sets for each row
   const rows = Array.from({ length: 5 }, (_, index) => {
     const startIndex = (images.length / 5) * index;
     return images.slice(startIndex, startIndex + images.length / 5);
@@ -19,7 +16,7 @@ const FourthSection = () => {
 
   return (
     <div className="fourth-section">
-      <h2 className='blue-title '>Clientes</h2>
+      <h2 className='blue-title container small-container'>Clientes</h2>
       {rows.map((rowImages, rowIndex) => (
         <div
           key={rowIndex}

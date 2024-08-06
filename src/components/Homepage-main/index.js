@@ -25,7 +25,11 @@ const HomepageMain = () => {
 
       <div className='container small-container'>
         <ThirdSection />
-        <FourthSection />
+      </div>
+
+      <FourthSection />
+      
+      <div className='container small-container'>
         <FifthSection  />
         <SixthSection />
       </div>

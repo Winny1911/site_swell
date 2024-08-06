@@ -6,7 +6,6 @@ import './style.css'
 const ThirdSection = () => {
   const { t } = useTranslation();
 
-
   return (
     <div className="third-section">
       <div className="">
