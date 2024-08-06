@@ -11,11 +11,13 @@ const SecondSection = () => {
       <div className="wave-studio container small-container">
         <h2 className='blue-title'>Wave Studio</h2>
         <div className='wave-studio-container'>
-          <div>
+          <div className='half-width'>
             <p>{t('waveStudioDescription')}</p>
             <button className="centered-button know-button">{t('See More')}</button>
           </div>
-          <img src={WaveStudio} alt={t('waveStudioImageAlt')} />
+          <div>
+            <img src={WaveStudio} alt={t('waveStudioImageAlt')} />
+          </div>
         </div>
       </div>
 

@@ -44,8 +44,12 @@
     position: relative;
 }
 
-.wave-studio-container p {
+.half-width {
     width: 68%;
+}
+
+.wave-studio-container p {
+    width: 100%;
 }
 
 .wave-studio-container img {
