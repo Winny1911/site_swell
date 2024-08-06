@@ -1,17 +1,14 @@
-.fifth-section {
-    display: flex;
-    text-align: left;
-    flex-direction: column;
-    align-items: center;
+.carousel-wrapper {
+    border-radius: 15px;
 }
 
-.carousel-wrapper {
+.feedback-wrap {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     color: white;
     width: 33rem;
     height: 16rem;
     background-color: #ffffff;
-    border-radius: 15px;
+    margin: 0 auto;
 }
 
 .align-self-right {
@@ -34,7 +31,7 @@
     color: #ffffff;
 }
 
-.carousel-item {
+.feedback {
     display: flex !important;
     flex-direction: column;
 
@@ -49,4 +46,10 @@
 
 .slick-track, .slick-list {
     height: 100%;
+}
+
+@media screen and (max-width: 575px) {
+    .feedback-wrap {
+        width: 100%;
+    }
 }

@@ -60,7 +60,7 @@ footer hr {
 }
 
 @media screen and (max-width: 760px) {
-    .terms-and-socials {
+    .terms-and-socials, .d-flex {
         flex-direction: column;
     }    
     .padding-right {
@@ -82,4 +82,8 @@ footer hr {
         align-items: center;
         width: 100%;
     }
+    .gap-6 {
+        gap: unset;
+    }
+
 }

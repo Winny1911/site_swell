@@ -1,4 +1,5 @@
 import React from 'react';
+import '../src/assets/i18n.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import './App.css';
 import Footer from './components/Footer-section';

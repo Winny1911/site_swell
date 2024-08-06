@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './style.css';
 import logo from '../../assets/images/logo.png';
 import whiteLogo from '../../assets/images/white-logo.png';
@@ -15,6 +16,7 @@ import jpFlag from '../../assets/images/japan-flag.svg';
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
 
   const location = useLocation();
 
@@ -30,6 +32,10 @@ const NavigationMenu = () => {
     if (menuOpen) {
       setMenuOpen(false);
     }
+  };
+
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
   };
 
   const currentLogo = location.pathname === '/payments' ? whiteLogo : logo;
@@ -51,23 +57,23 @@ const NavigationMenu = () => {
 
       <div className={`language-menu-container ${languageMenuOpen ? 'show' : ''}`}>
         <ul>
-          <li><img src={ptFlag} alt="PT" /> <a href="#pt">PT</a></li>
-          <li><img src={enFlag} alt="EN" /> <a href="#en">EN</a></li>
-          <li><img src={esFlag} alt="ES" /> <a href="#es">ES</a></li>
-          <li><img src={jpFlag} alt="JP" /> <a href="#jp">JP</a></li>
+          <li onClick={() => changeLanguage('pt')}><img src={ptFlag} alt="PT" /> PT</li>
+          <li onClick={() => changeLanguage('en')}><img src={enFlag} alt="EN" /> EN</li>
+          <li onClick={() => changeLanguage('es')}><img src={esFlag} alt="ES" /> ES</li>
+          <li onClick={() => changeLanguage('jp')}><img src={jpFlag} alt="JP" /> JP</li>
         </ul>
       </div>
 
       <div className={`side-menu ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/">Início</Link></li>
-          <li><Link to="/about">A Swell</Link></li>
+          <li><Link to="/">{t('Início')}</Link></li>
+          <li><Link to="/about">{t('A Swell')}</Link></li>
           <li><a href="#wavestudio">Wave Studio</a></li>
           <li><a href="#wavestudio">Wave AI</a></li>
-          <li><Link to="/payments">Wave Payments</Link></li>
-          <li><a href="#cases">Cases Swell</a></li>
-          <li><a href="#paymenthub">Carreiras Swell</a></li>
-          <li><a href="#perfil">Perfil</a></li>
+          <li><Link to="/payments">{t('Wave Payments')}</Link></li>
+          <li><a href="#cases">{t('Cases Swell')}</a></li>
+          <li><a href="#paymenthub">{t('Carreiras Swell')}</a></li>
+          <li><Link to="/">{t('Perfil')}</Link></li>
         </ul>
       </div>
     </div>

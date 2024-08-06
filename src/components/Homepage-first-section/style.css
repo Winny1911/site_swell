@@ -26,12 +26,12 @@
 }
 
 .carousel-wrapper {
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Box shadow */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
     height: 100%;
 }
 
-.carousel-item {
-    padding: 3rem;
+.carousel-description {
+    padding: 2rem;
 }
 
 .slick-slider {

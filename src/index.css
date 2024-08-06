@@ -45,4 +45,13 @@ button {
   color: #1A1449 !important;
 }
 
+.slick-list button {
+  display: none;
+}
 
+
+@media screen and (max-width: 570px) {
+  .slick-initialized .slick-slide {
+    overflow-y: auto;
+  }
+}

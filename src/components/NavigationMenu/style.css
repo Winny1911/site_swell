@@ -97,21 +97,24 @@
 }
 
 .language-menu-container.show {
-  opacity: 1; /* Fade in the element */
-  transform: translateY(0); /* Move to its original position */
-  visibility: visible; /* Make the element visible */
+  opacity: 1; 
+  transform: translateY(0);
+  visibility: visible; 
 }
 
 .language-menu-container ul {
   list-style: none;
-  padding-left: 50%;
-   margin: 0;
+  padding-left: 44%;
+  padding-top: 25%;
+  margin: 0;
 }
 
 .language-menu-container li {
   margin: 5px 0;
   display: flex;
   align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 .language-menu-container img {
@@ -144,4 +147,5 @@
 
 .menu-icons.language-menu-open .visibility-toggle {
   visibility: hidden;
+  width: 1px;
 }
