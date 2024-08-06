@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import './style.css';
 import images from '../../assets/images/clientes-home/clientes.js';
 
 const FourthSection = () => {
   const [hoveredRow, setHoveredRow] = useState(null);
+  const { t } = useTranslation();
 
   const getRowDirection = (index) => {
     return index % 2 === 0 ? 'slide-right' : 'slide-left';
@@ -16,7 +18,7 @@ const FourthSection = () => {
 
   return (
     <div className="fourth-section">
-      <h2 className='blue-title container small-container'>Clientes</h2>
+      <h2 className='blue-title container small-container'>{t('clients')}</h2>
       {rows.map((rowImages, rowIndex) => (
         <div
           key={rowIndex}
