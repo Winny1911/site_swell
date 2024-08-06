@@ -25,11 +25,7 @@ const HomepageMain = () => {
 
       <div className='container small-container'>
         <ThirdSection />
-      </div>
-
-      <FourthSection />
-      
-      <div className='container small-container'>
+        <FourthSection />
         <FifthSection  />
         <SixthSection />
       </div>
