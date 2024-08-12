@@ -18,6 +18,10 @@
     gap: unset;
 }
 
+.pd-0 {
+    padding: unset;
+}
+
 .center-div {
     display: flex;
     flex-direction: column;
