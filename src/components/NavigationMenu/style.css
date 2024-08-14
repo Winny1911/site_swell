@@ -134,18 +134,23 @@
 }
 
 .language-menu-trigger.move-left {
-  transform: translateX(-1.5rem);
+  transform: translateX(-4.5rem);
 }
 
 .visibility-toggle.hidden {
   visibility: hidden;
-}
-
-.language-menu-container.show ~ .menu-icons .visibility-toggle {
-  visibility: hidden;
+  width: 0; 
+  height: 0;
+  overflow: hidden;
 }
 
 .menu-icons.language-menu-open .visibility-toggle {
   visibility: hidden;
-  width: 1px;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.language-menu-container.show ~ .menu-icons .visibility-toggle {
+  visibility: hidden;
 }

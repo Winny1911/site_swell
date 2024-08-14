@@ -48,6 +48,10 @@
     height: 100%;
 }
 
+.fifth-section .slick-next, .fifth-section .slick-prev {
+    width: 0px;
+}
+
 @media screen and (max-width: 575px) {
     .feedback-wrap {
         width: 100%;

@@ -12,6 +12,7 @@ import ptFlag from '../../assets/images/brasil-flag.svg'; // Add your flag image
 import enFlag from '../../assets/images/usa-flag.svg';
 import esFlag from '../../assets/images/spain-flag.svg';
 import jpFlag from '../../assets/images/japan-flag.svg';
+import WhatsAppLink from '../Whatsapp-link';
 
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -46,6 +47,10 @@ const NavigationMenu = () => {
       <img src={currentLogo} className={`icons ${logoClassName}`} alt="Logo" />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
+        <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
+            <WhatsAppLink />
+        </div>
+
         <div onClick={toggleLanguageMenu} className={`language-menu-trigger ${languageMenuOpen ? 'move-left' : ''}`}>
           <img src={languageMenuOpen ? openLanguageIcon : closedLanguageIcon} className="icons" alt="Language menu icon" />
         </div>
