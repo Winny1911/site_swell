@@ -28,14 +28,14 @@ const settings = {
                 foram extremamente atenciosos e prestativos. Recomendo o trabalho e com certeza indicarei aos amigos"</p>
             <FontAwesomeIcon icon={faQuoteRight} className="quote-icon" />
             </div>
-            <div className="carousel-item">
+            {/* <div className="carousel-item">
               <h3>Nome, empresa</h3>
               <p>texto aqui</p>
             </div>
             <div className="carousel-item">
               <h3>Nome, empresa</h3>
               <p>texto aqui</p>
-            </div>
+            </div> */}
           </Slider>
         </div>
     </div>

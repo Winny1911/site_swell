@@ -31,7 +31,7 @@
 }
 
 .carousel-description {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .slick-slider {
@@ -111,3 +111,6 @@ p {
     }
 }
   
+.m0-auto {
+    margin: 0 auto;
+}
