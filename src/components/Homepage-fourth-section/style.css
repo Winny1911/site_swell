@@ -1,4 +1,4 @@
-.block {
+.fourth-section .block {
     width: 10rem;
     height: 10rem;
 }
@@ -9,7 +9,7 @@
     position: relative;
 }
   
-.row {
+.fourth-section .row {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -18,28 +18,28 @@
   position: relative;
 }
 
-  .white-space {
+.fourth-section .white-space {
     white-space: nowrap;
   }
 
-  .client-image {
-    width: 9rem;
+  .fourth-section  .client-image {
+    width: 11rem;
     transition: transform 0.3s;
   }
   
-  .row img {
+  .fourth-section .row img {
     flex-shrink: 0;
   }
   
-  .slide-right {
+  .fourth-section  .slide-right {
     animation: slideRight 30s linear infinite;
   }
   
-  .slide-left {
+  .fourth-section  .slide-left {
     animation: slideLeft 30s linear infinite;
   }
   
-  .paused {
+  .fourth-section  .paused {
     animation-play-state: paused;
   }
   

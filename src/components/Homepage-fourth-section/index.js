@@ -11,9 +11,9 @@ const FourthSection = () => {
     return index % 2 === 0 ? 'slide-right' : 'slide-left';
   };
 
-  const rows = Array.from({ length: 5 }, (_, index) => {
-    const startIndex = (images.length / 5) * index;
-    return images.slice(startIndex, startIndex + images.length / 5);
+  const rows = Array.from({ length: 2 }, (_, index) => {
+    const startIndex = (images.length / 2) * index;
+    return images.slice(startIndex, startIndex + images.length / 2);
   });
 
   return (
