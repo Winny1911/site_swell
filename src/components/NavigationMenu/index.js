@@ -18,8 +18,8 @@ const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-  const navigate = useNavigate();
   const location = useLocation();
+  // const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -30,6 +30,7 @@ const NavigationMenu = () => {
 
   const toggleLanguageMenu = () => {
     setLanguageMenuOpen(!languageMenuOpen);
+    console.log('languageMenuOpen');
     if (menuOpen) {
       setMenuOpen(false);
     }
@@ -39,18 +40,18 @@ const NavigationMenu = () => {
     i18n.changeLanguage(lng);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
-      document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
-    }, 100); 
-  };
+  // const handleClick = (e) => {
+  //   e.preventDefault();
+  //   navigate('/');
+  //   setTimeout(() => {
+  //     document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
+  //   }, 100); 
+  // };
 
-  const handleHomepageClick = (e) => {
-    e.preventDefault();
-    navigate('/'); 
-  };
+  // const handleHomepageClick = (e) => {
+  //   e.preventDefault();
+  //   navigate('/'); 
+  // };
 
   // const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira') ? whiteLogo : logo;
   // const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira') ? 'white-logo' : 'default-logo';
