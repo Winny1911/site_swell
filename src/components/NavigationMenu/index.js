@@ -60,7 +60,7 @@ const NavigationMenu = () => {
 
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
-      <img src={currentLogo} onClick={handleHomepageClick} className={`icons ${logoClassName}`} alt="Logo" />
+      <img src={currentLogo} className={`icons ${logoClassName}`} alt="Logo" />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
         <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
@@ -89,7 +89,7 @@ const NavigationMenu = () => {
         <ul>
           <li><Link to="/">{t('Home')}</Link></li>
           <li><Link to="/about#aswell">{t('A Swell')}</Link></li>
-          <li><a href="#wavestudio" onClick={handleClick}>{t('Wave Studio')}</a></li>
+          <li><a href="#wavestudio">{t('Wave Studio')}</a></li>
           <li><Link to="/payments">{t('Wave Payments')}</Link></li>
           <li><a href="/carreira">{t('Carreiras Swell')}</a></li>
           <li><Link to="#">{t('Perfil')}</Link></li>
