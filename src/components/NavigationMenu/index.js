@@ -52,8 +52,10 @@ const NavigationMenu = () => {
     navigate('/'); 
   };
 
-  const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira') ? whiteLogo : logo;
-  const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira') ? 'white-logo' : 'default-logo';
+  // const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira') ? whiteLogo : logo;
+  // const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira') ? 'white-logo' : 'default-logo';
+  const currentLogo = location.pathname === '/payments' ? whiteLogo : logo;
+  const logoClassName = location.pathname === '/payments' ? 'white-logo' : 'default-logo';
 
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
@@ -88,7 +90,6 @@ const NavigationMenu = () => {
           <li><Link to="/about#aswell">{t('A Swell')}</Link></li>
           <li><a href="#wavestudio" onClick={handleClick}>{t('Wave Studio')}</a></li>
           <li><Link to="/payments">{t('Wave Payments')}</Link></li>
-          {/* <li><a href="#cases">{t('Cases Swell')}</a></li> */}
           <li><a href="/carreira">{t('Carreiras Swell')}</a></li>
           <li><Link to="#">{t('Perfil')}</Link></li>
         </ul>
