@@ -1,19 +1,25 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import './style.css';
 import logo from '../../assets/images/logo.png';
+import whiteLogo from '../../assets/images/white-logo.png';
 import openMenuIcon from '../../assets/images/menu-blue-icon.png';
 import closedMenuIcon from '../../assets/images/menu-black-icon.png';
 import openLanguageIcon from '../../assets/images/language-blue-icon.png';
 import closedLanguageIcon from '../../assets/images/language-black-icon.png';
-import ptFlag from '../../assets/images/brasil-flag.svg'; // Add your flag images
+import ptFlag from '../../assets/images/brasil-flag.svg';
 import enFlag from '../../assets/images/usa-flag.svg';
 import esFlag from '../../assets/images/spain-flag.svg';
 import jpFlag from '../../assets/images/japan-flag.svg';
+import WhatsAppLink from '../Whatsapp-link';
 
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
+  const { t, i18n } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const toggleMenu = () => {
     setMenuOpen(!menuOpen);
@@ -24,16 +30,41 @@ const NavigationMenu = () => {
 
   const toggleLanguageMenu = () => {
     setLanguageMenuOpen(!languageMenuOpen);
+    console.log('languageMenuOpen');
     if (menuOpen) {
       setMenuOpen(false);
     }
   };
 
+  const changeLanguage = (lng) => {
+    i18n.changeLanguage(lng);
+  };
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
+    }, 100); 
+  };
+
+  const handleHomepageClick = (e) => {
+    e.preventDefault();
+    navigate('/'); 
+  };
+
+  const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira') ? whiteLogo : logo;
+  const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira') ? 'white-logo' : 'default-logo';
+
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
-      <img src={logo} className="icons" alt="Logo" />
+      <img src={currentLogo} className={`icons ${logoClassName}`} alt="Logo" />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
+        <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
+            <WhatsAppLink />
+        </div>
+
         <div onClick={toggleLanguageMenu} className={`language-menu-trigger ${languageMenuOpen ? 'move-left' : ''}`}>
           <img src={languageMenuOpen ? openLanguageIcon : closedLanguageIcon} className="icons" alt="Language menu icon" />
         </div>
@@ -45,21 +76,21 @@ const NavigationMenu = () => {
 
       <div className={`language-menu-container ${languageMenuOpen ? 'show' : ''}`}>
         <ul>
-          <li><img src={ptFlag} alt="PT" /> <a href="#pt">PT</a></li>
-          <li><img src={enFlag} alt="EN" /> <a href="#en">EN</a></li>
-          <li><img src={esFlag} alt="ES" /> <a href="#es">ES</a></li>
-          <li><img src={jpFlag} alt="JP" /> <a href="#jp">JP</a></li>
+          <li onClick={() => changeLanguage('pt')}><img src={ptFlag} alt="PT" /> PT</li>
+          <li onClick={() => changeLanguage('en')}><img src={enFlag} alt="EN" /> EN</li>
+          <li onClick={() => changeLanguage('es')}><img src={esFlag} alt="ES" /> ES</li>
+          <li onClick={() => changeLanguage('jp')}><img src={jpFlag} alt="JP" /> JP</li>
         </ul>
       </div>
 
       <div className={`side-menu ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/">Início</Link></li>
-          <li><Link to="/about">A Swell</Link></li>
-          <li><a href="#wavestudio">Wave Studio</a></li>
-          <li><a href="#cases">Cases</a></li>
-          <li><a href="#paymenthub">Payment Hub</a></li>
-          <li><a href="#perfil">Perfil</a></li>
+          <li><Link to="/">{t('Home')}</Link></li>
+          <li><Link to="/about#aswell">{t('A Swell')}</Link></li>
+          <li><a href="#wavestudio">{t('Wave Studio')}</a></li>
+          <li><Link to="/payments">{t('Wave Payments')}</Link></li>
+          <li><a href="/carreira">{t('Carreiras Swell')}</a></li>
+          <li><Link to="#">{t('Perfil')}</Link></li>
         </ul>
       </div>
     </div>
