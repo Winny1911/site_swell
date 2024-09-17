@@ -1,7 +1,7 @@
 .back-to-top {
     position: fixed;
-    bottom: 10rem;
-    right: 5rem;
+    bottom: 3rem;
+    right: 3rem;
     width: 35px;
     height: 35px;
     background-color: #41a3e0;
@@ -23,4 +23,12 @@
 .back-to-top.visible {
     opacity: 1;
     visibility: visible;
+}
+
+
+@media screen and (min-width: 1024px) {
+    .back-to-top {
+        right: 10rem;
+        bottom: 10rem;
+    }
 }

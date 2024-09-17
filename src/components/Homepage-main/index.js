@@ -4,7 +4,6 @@ import FirstSection from '../Homepage-first-section';
 import SecondSection from '../Homepage-second-section';
 import ThirdSection from '../Homepage-third-section';
 import FourthSection from '../Homepage-fourth-section';
-import FifthSection from '../Homepage-fifth-section';
 import SixthSection from '../Homepage-sixth-section';
 import BoasVindasVideo from '../../assets/BoasVindasVideo.mp4'
 
@@ -30,7 +29,7 @@ const HomepageMain = () => {
       <FourthSection />
       
       <div className='container small-container'>
-        <FifthSection  />
+        {/* <FifthSection  /> */}
         <SixthSection />
       </div>
     </>

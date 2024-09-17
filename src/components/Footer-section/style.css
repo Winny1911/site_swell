@@ -5,7 +5,6 @@ footer {
 
 footer ul {
     display: flex;
-    gap: 0.5rem;
     flex-direction: column;
 
     list-style-type: none;
@@ -57,6 +56,15 @@ footer hr {
 .list-hk-darkblue li a {
     font-family: 'HKGrotesk-Light', sans-serif;
     color: #1A1449 !important;
+}
+
+.text-size-12 {
+    font-size: 12px;
+}
+
+.terms-and-socials {
+    font-family: 'HKGrotesk-Medium', sans-serif;
+    font-size: 16px;
 }
 
 @media screen and (max-width: 760px) {

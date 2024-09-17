@@ -14,13 +14,13 @@ const About = () => {
             Your browser does not support the video tag.
         </video>
 
-        <div className="container small-container gap-0 pt-5 pt-5 text-align-center">
+        <div id="aswell" className="container small-container gap-0 pt-5 pt-5 text-align-center">
             "          
                 <p>{t('swell_description')}</p>
             "
         </div>
 
-        <div className="section-wrapper section-width pd-0">
+        <div className="section-wrapper section-width pd-0 background-blue">
             <img src={SwellFlux} className="container img-fluid gap-0" alt="swell-flux" />
         </div>
 

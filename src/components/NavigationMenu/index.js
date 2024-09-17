@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import './style.css';
 import logo from '../../assets/images/logo.png';
@@ -18,7 +18,7 @@ const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
-
+  const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMenu = () => {
@@ -39,12 +39,25 @@ const NavigationMenu = () => {
     i18n.changeLanguage(lng);
   };
 
-  const currentLogo = location.pathname === '/payments' ? whiteLogo : logo;
-  const logoClassName = location.pathname === '/payments' ? 'white-logo' : 'default-logo';
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
+    }, 100); 
+  };
+
+  const handleHomepageClick = (e) => {
+    e.preventDefault();
+    navigate('/'); 
+  };
+
+  const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira') ? whiteLogo : logo;
+  const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira') ? 'white-logo' : 'default-logo';
 
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
-      <img src={currentLogo} className={`icons ${logoClassName}`} alt="Logo" />
+      <img src={currentLogo} onClick={handleHomepageClick} className={`icons ${logoClassName}`} alt="Logo" />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
         <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
@@ -71,14 +84,13 @@ const NavigationMenu = () => {
 
       <div className={`side-menu ${menuOpen ? 'active' : ''}`}>
         <ul>
-          <li><Link to="/">{t('Início')}</Link></li>
-          <li><Link to="/about">{t('A Swell')}</Link></li>
-          <li><a href="#wavestudio">Wave Studio</a></li>
-          <li><a href="#wavestudio">Wave AI</a></li>
+          <li><Link to="/">{t('Home')}</Link></li>
+          <li><Link to="/about#aswell">{t('A Swell')}</Link></li>
+          <li><a href="#wavestudio" onClick={handleClick}>{t('Wave Studio')}</a></li>
           <li><Link to="/payments">{t('Wave Payments')}</Link></li>
-          <li><a href="#cases">{t('Cases Swell')}</a></li>
-          <li><a href="#paymenthub">{t('Carreiras Swell')}</a></li>
-          <li><Link to="/">{t('Perfil')}</Link></li>
+          {/* <li><a href="#cases">{t('Cases Swell')}</a></li> */}
+          <li><a href="/carreira">{t('Carreiras Swell')}</a></li>
+          <li><Link to="#">{t('Perfil')}</Link></li>
         </ul>
       </div>
     </div>

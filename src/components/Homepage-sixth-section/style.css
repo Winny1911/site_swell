@@ -1,11 +1,13 @@
 .sixth-section {
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    /* padding: 4rem 26rem; */
+    margin: 2rem 0;
 }
 
 .sixth-section h2 {
     color: #034F78ff;
-    font-size: 1.625rem;
+    font-size: 1.725rem;
 }
 
 .text-underline {
@@ -13,14 +15,17 @@
 }
 
 .contact-form {
-    padding: 0 15.5rem;
+    padding: 2rem 1rem;
     display: flex;
     flex-direction: column;
+
+    background-color: #1A1449;
+    border-radius: 20px;
 }
 
 .form-control {
     background-color: #f1f1f1;
-    border-radius: 1.5rem;
+    border-radius: 6px;
 }
 
 .form-control::placeholder {
@@ -43,11 +48,10 @@
 }
 
 .float-right {
-    align-self: end;
     background-color: #201046ff;
-    border-radius: 10px;
+    border-radius: 15px;
     border: none;
-    padding: 4px 75px;
+    text-wrap: nowrap;
     font-weight: bold;
     font-size: 16px;
     display: flex;
@@ -65,8 +69,20 @@
     text-align: left;
 }
 
-@media screen and (max-width: 767px) {
-    .contact-form {
-        padding: 0;
+@media screen and (min-width: 768px) {
+    .float-right {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sixth-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .sixth-section .left-box {
+        width: 387px;
     }
 }

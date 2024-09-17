@@ -32,6 +32,10 @@
     text-align: center;
 }
 
+.background-blue {
+    background-color: #41A3E0;
+}
+
 @media screen and (max-width: 767px) {
     .homepage-section {
       flex-direction: column;

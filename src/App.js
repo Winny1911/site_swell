@@ -9,7 +9,6 @@ import BackToTopButton from './components/ScrollToTop';
 import About from './components/About';
 import CareerPage from './components/Careers-page';
 import WavePaymentsPage from './components/Wave-payments';
-import WhatsAppLink from './components/Whatsapp-link/index.js';
 
 function App() {
   return (

@@ -1,11 +1,23 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import LogoFooter from '../../assets/images/logo-footer.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faXTwitter, faLinkedin, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faXTwitter, faLinkedin, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import './style.css'
 
 const Footer = () => {
+  const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleClick = (e) => {
+    e.preventDefault();
+    navigate('/');
+    setTimeout(() => {
+      document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
+    }, 100); 
+  };
+  
   return (
     <footer>
       <div className="row terms-and-socials">
@@ -15,15 +27,13 @@ const Footer = () => {
         <div className="col-4 d-flex justify-content-center pt-lg">
           <ul className='list-hk-darkblue small-screen'>
             <div>
-              <li><a href="#">Início</a></li>
-              <li><a href="#">A Swell</a></li>
-              <li><a href="#">Wave Studio</a></li>
-              <li><a href="#">Wave AI</a></li>
+              <li><a href="/">{t('Home')}</a></li>
+              <li><a href="/about#aswell" >{t('A Swell')}</a></li>
+              <li><a href="#wavestudio" onClick={handleClick}>{t('Wave Studio')}</a></li>
             </div>
             <div>
-              <li><a href="#">Wave Payments</a></li>
-              <li><a href="#">Cases Swell</a></li>
-              <li><a href="#">Perfil</a></li>
+              <li><a href="/payments">{t('Wave Payments')}</a></li>
+              <li><a href="#">{t('Perfil')}</a></li>
             </div>
           </ul>
         </div>
@@ -33,24 +43,28 @@ const Footer = () => {
                 <p className='font-color'>PALHOÇA - SANTA CATARINA</p>
             </div>
             <div className="pt-lg">
-              <p className='font-color'>Procuramos pessoas talentosas e</p>
-              <p className='font-color'>apaixonadas para se juntar à equipe.</p>
-              <Link to="/carreira">Carreiras Swell</Link>
+              <p className='font-color'>{t('Procuramos pessoas talentosas e')}</p>
+              <p className='font-color'>{t('apaixonadas para se juntar à equipe.')}</p>
+              <Link to="/carreira" className='list-hk-darkblue'>{t('Carreiras Swell')}</Link>
             </div>
         </div>
       </div>
       <hr style={{ borderTop: '2px solid white' }} />
       <div className="row terms-and-socials">
         <div className="col-6 d-flex gap-6 font-color">
-          <p style={{ fontSize: '12px' }}>Política de Privacidade</p>
-          <p style={{ fontSize: '12px' }}>Termos e Condições</p>
-          <p style={{ fontSize: '12px' }}>Política de Cookies</p>
+          <a className="text-white text-size-12" href="/politica_privacidade.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '12ax' }}>{t('privPol')}</a>
+          <p className='text-size-12'>{t('cookiesPol')}</p>
         </div>
         <div className="col-6 icon-color font-color padding-right" style={{ textAlign: 'right' }}>
-          <FontAwesomeIcon icon={faInstagram} size="lg" />
-          <FontAwesomeIcon icon={faXTwitter} size="lg" />
-          <FontAwesomeIcon icon={faLinkedin} size="lg" />
-          <FontAwesomeIcon icon={faYoutube} size="lg" />
+          <a className="text-white" href="https://www.instagram.com/swellitsolutions/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faInstagram} size="lg" />
+          </a>
+          <a className="text-white" href="https://www.linkedin.com/company/swellitsolutions/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faLinkedin} size="lg" />
+          </a>
+          <a className="text-white" href="https://www.facebook.com/SwellItSolutions/" target="_blank" rel="noopener noreferrer">
+            <FontAwesomeIcon icon={faFacebook} size="lg" />
+          </a>
         </div>
       </div>
       <div className="row font-color">

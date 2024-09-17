@@ -1,5 +1,6 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
+import { useNavigate } from 'react-router-dom';
 import Slider from 'react-slick';
 import 'slick-carousel/slick/slick.css';
 import 'slick-carousel/slick/slick-theme.css';
@@ -8,6 +9,11 @@ import './style.css';
 
 const FirstSection = () => {
   const { t } = useTranslation();
+  const navigate = useNavigate();
+
+  const handleClick = () => {
+    navigate('/about');
+  };
 
   const settings = {
     dots: true,
@@ -22,7 +28,7 @@ const FirstSection = () => {
       <div className="right-div">
         <div className="carousel-wrapper">
           <Slider {...settings}>
-            <div className="carousel-item">
+            <div className="carousel-item cursor-pointer" onClick={handleClick}>
               <CarrouselCard className="" alt="card informando sobre pagamentos" />
             </div>
           </Slider>
@@ -31,7 +37,9 @@ const FirstSection = () => {
         <div className="left-div">
           <h2>{t('swell_title')}</h2>
           <p>{t('swell_description')}</p>
-          <button className="know-button">{t('know_button')}</button>
+          <button className="know-button" onClick={handleClick}>
+            {t('know_button')}
+          </button>
         </div>
     </div>
   );
