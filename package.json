@@ -13,6 +13,7 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "caniuse-lite": "^1.0.30001660",
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^7.2.1",
     "jquery": "^3.7.1",
