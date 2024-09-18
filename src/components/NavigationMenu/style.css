@@ -20,10 +20,12 @@
 .icons {
   width: 42px;
   cursor: pointer;
+  z-index: 2;
 }
 
 .white-logo {
   width: 60px;
+  z-index: 2;
 }
 
 .side-menu {
@@ -76,7 +78,7 @@
 
 .side-menu a {
   color: #41A3E0;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 1.2rem;
 }
 

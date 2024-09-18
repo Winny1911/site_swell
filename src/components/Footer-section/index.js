@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LogoFooter from '../../assets/images/logo-footer.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faInstagram, faXTwitter, faLinkedin, faYoutube, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import { faInstagram, faLinkedin, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import './style.css'
 
 const Footer = () => {
@@ -27,13 +27,13 @@ const Footer = () => {
         <div className="col-4 d-flex justify-content-center pt-lg">
           <ul className='list-hk-darkblue small-screen'>
             <div>
-              <li><a href="/">{t('Home')}</a></li>
-              <li><a href="/about#aswell" >{t('A Swell')}</a></li>
-              <li><a href="#wavestudio" onClick={handleClick}>{t('Wave Studio')}</a></li>
+              <li><Link to="/">{t('Home')}</Link></li>
+              <li><Link to="/about#aswell" >{t('A Swell')}</Link></li>
+              <li><Link to="/" onClick={handleClick}>{t('Wave Studio')}</Link></li>
             </div>
             <div>
-              <li><a href="/payments">{t('Wave Payments')}</a></li>
-              <li><a href="#">{t('Perfil')}</a></li>
+              <li><Link to="/payments">{t('Wave Payments')}</Link></li>
+              <li><Link to="#">{t('Perfil')}</Link></li>
             </div>
           </ul>
         </div>

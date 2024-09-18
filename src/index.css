@@ -87,3 +87,7 @@ button {
 .btn-primary-light {
   background-color: #41A3E0 !important;
 }
+
+.default-logo, .white-logo {
+  cursor: pointer;
+}

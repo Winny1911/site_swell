@@ -1,7 +1,7 @@
-import WavePaymentsAdquirent from '../../assets/images/wave-payments/adquirente.svg';
-import WavePaymentsSubAdquirent from '../../assets/images/wave-payments/sub-adquirente.svg';
-import WavePaymentsDigital from '../../assets/images/wave-payments/pagamentos-digitais-azul.svg';
-import YourBusiness from '../../assets/images/wave-payments/pagamentos-digitais-branco.svg';
+import WavePaymentsAdquirent from '../../assets/images/wave-payments/adquirente.png';
+import WavePaymentsSubAdquirent from '../../assets/images/wave-payments/sub-adquirente.png';
+import WavePaymentsDigital from '../../assets/images/wave-payments/pagamentos-digitais-azul.png';
+import YourBusiness from '../../assets/images/wave-payments/pagamentos-digitais-branco.png';
 
 import './style.css';
 

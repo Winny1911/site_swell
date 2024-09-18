@@ -50,6 +50,10 @@
     font-size: 30px;
 }
 
+.discovery-section p {
+    text-align: justify;
+}
+
 .wave-studio-container {
     display: flex;
     flex-direction: column;
@@ -63,6 +67,7 @@
 
 .wave-studio-container p {
     width: 100%;
+    text-align: justify;
 }
 
 .wave-studio-container img {
@@ -85,6 +90,12 @@
     border-radius: 5px;
     padding: 4px 10px;
     color: white;
+}
+
+.second-section .know-button {
+    border-radius: 20px;
+    border: none;
+    padding: 7px 15px;
 }
 
 .second-section .discovery-section p {
@@ -174,6 +185,11 @@
 @media screen and (min-width: 768px) {
     .section-wrapper {
         flex-wrap: wrap;
+    }
+
+    .centered-button {
+        display: block;
+        margin: unset;
     }
 }
 
