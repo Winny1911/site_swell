@@ -1,0 +1,139 @@
+.homepage-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 35rem;
+    gap: 2rem;
+}
+
+.homepage-section .right-div .slick-slide div {
+    width: 100%;
+    height: 100%;
+}
+
+.homepage-section .carousel-item {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: baseline;
+}
+
+.left-div {
+    flex: 1;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: justify;
+}
+
+.left-div p {
+    padding: 2rem 0 0.2rem 0;
+}
+
+.right-div {
+    flex: 1;
+    width: 50%;
+}
+
+.homepage-section .carousel-wrapper {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    height: 100%;
+    border-radius: 15px;
+}
+
+.homepage-section .carousel-description {
+    padding: 1rem;
+}
+
+.homepage-section .slick-slider {
+    width: 100%;
+    aspect-ratio: 10 / 9; 
+}
+
+.homepage-section .slick-track, .slick-list {
+    height: 100%;
+    border-radius: 15px;
+}
+
+.slick-list button, .slick-prev:before, .slick-next:before {
+    color: unset;
+}
+
+.slick-dots {
+    bottom: -30px;
+}
+
+.slick-dots li button:before {
+    opacity: 1;
+}
+
+.slick-dots li.slick-active button:before {
+    opacity: 0;
+}
+
+.slick-dots li button:before {
+    color: unset;
+}
+
+.slick-dots li button {
+    width: 5px;
+    height: 5px;
+    padding: 3px;
+    background: #3d4473;
+    box-shadow: -1px 3px 6px #888888;
+    border-radius: 15px;
+}
+
+.slick-dots .slick-active button {
+    background: white;
+    border: 1px solid black;
+}
+
+h2 {
+    color: #7BA4D5ff;
+}
+
+h3 {
+    color: #41A3E0;
+}
+
+p {
+    color: #1A1449;
+}
+
+.know-button {
+    background-color: #201046ff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: white;
+}
+
+@media screen and (min-width: 768px) {
+    .left-div {
+        align-items: flex-start;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .homepage-section .slick-slider { 
+        height: 25rem;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .right-div {
+        display: flex;
+        flex: 1;
+        width: 50%;
+        justify-content: flex-end;
+    }
+    
+    .homepage-section .carousel-wrapper {
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        height: 100%;
+        border-radius: 15px;
+        width: fit-content;
+    }
+}
