@@ -22,7 +22,7 @@ const SecondSection = () => {
       }
     }, 100);
   };
-
+  
   const handleSeeTechClick = () => {
     navigate('/wave#tech');
     setTimeout(() => {
@@ -43,6 +43,11 @@ const SecondSection = () => {
     }, 100);
   };
 
+
+  const handleClickWave = () => {
+    navigate('/about');
+  };
+
   return (
     <div id="wavestudio" className="second-section">
       <div className="wave-studio container small-container">
@@ -50,9 +55,9 @@ const SecondSection = () => {
           <h2 className='white-text'>{t('Wave Studio')}</h2>
           <div className='half-width'>
             <p>{t('waveStudioDescription')}</p>
-            <a href="/wave">
-              <button className="centered-button know-button">{t('See More')}</button>
-            </a>
+              <button className="centered-button know-button" onClick={handleClickWave}>
+                {t('See More')}
+              </button>
           </div>
           <img src={WaveStudio} alt={t('waveStudioImageAlt')} />
         </div>
