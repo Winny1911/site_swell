@@ -8,10 +8,10 @@ import openMenuIcon from '../../assets/images/menu-blue-icon.png';
 import closedMenuIcon from '../../assets/images/menu-black-icon.png';
 import openLanguageIcon from '../../assets/images/language-blue-icon.png';
 import closedLanguageIcon from '../../assets/images/language-black-icon.png';
-import ptFlag from '../../assets/images/brasil-flag.svg';
-import enFlag from '../../assets/images/usa-flag.svg';
-import esFlag from '../../assets/images/spain-flag.svg';
-import jpFlag from '../../assets/images/japan-flag.svg';
+import ptFlag from '../../assets/images/flags/brasil-flag.svg';
+import enFlag from '../../assets/images/flags/usa-flag.svg';
+import esFlag from '../../assets/images/flags/spain-flag.svg';
+import jpFlag from '../../assets/images/flags/japan-flag.svg';
 import WhatsAppLink from '../Whatsapp-link';
 
 const NavigationMenu = () => {

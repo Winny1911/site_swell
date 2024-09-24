@@ -1,8 +1,8 @@
 import React from 'react';
 
 import WaveStudioWheel from '../../assets/images/wave-studio/wave-studio-transparent.svg';  
-import WaveStudioFlux from '../../assets/images/wave-studio/WaveStudioIlustração.svg';
-import WaveTalentIllustration from '../../assets/images/wave-studio/WaveTalentIlustração.svg';
+import WaveStudioFlux from '../../assets/images/wave-studio/WaveStudioIlustracao.svg';
+import WaveTalentIllustration from '../../assets/images/wave-studio/WaveTalentIlustracao.png';
 
 import WaveDiscovery from './discovery';
 import WaveTech from './tech';
@@ -11,14 +11,14 @@ import WaveTalent from './talent';
 
 const WaveStudio = () => {
   return (
-    <>
+    <div>
         <div className="bg-wave min-h-screen flex items-center justify-center px-4">
         <div className="text-center">
             <h1 className="text-8xl font-bold text-white">Wave Studio</h1>
             <p className="text-4xl text-white mt-4">Inovação Sob Medida, Resultados Extraordinários.</p>
         </div>
         </div>
-        <div className='flex gap-4 flex-col md:flex-row items-center justify-center px-4 md:px-12' style={{ backgroundColor: '#41A3E0F0' }}>
+        <div className='flex gap-4 flex-col md:flex-row items-center justify-center px-4 md:px-12 pb-4' style={{ backgroundColor: '#41A3E0F0' }}>
             <img src={WaveStudioWheel} alt="Wave Studio" />
             <p className="text-white text-justify mt-4 md:w-[507px]">
                 Reunimos a expertise de nossos profissionais para criar uma equipe multidisciplinar que 
@@ -28,7 +28,9 @@ const WaveStudio = () => {
             </p>
         </div>
 
-        <img src={WaveStudioFlux} alt="Wave Studio" className='mx-auto w-[1400px]'/>
+        <div>
+          <img src={WaveStudioFlux} alt="Wave Studio" className='mx-auto w-[1400px] mb-12 -mt-2 md:-mt-4 lg:-mt-8 xl:-mb-9'/>
+        </div>
 
         <WaveDiscovery />
 
@@ -38,9 +40,11 @@ const WaveStudio = () => {
 
         <WaveTalent />
 
-        <img src={WaveTalentIllustration} alt="Wave Studio" className='mx-auto w-[300px]'/>
+        <div>
+         <img src={WaveTalentIllustration} alt="Wave Studio" className='mx-auto w-[300px]'/>
+        </div>
 
-    </>
+    </div>
   );
 };
 
