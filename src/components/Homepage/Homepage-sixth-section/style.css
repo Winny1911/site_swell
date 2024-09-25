@@ -1,12 +1,14 @@
 .sixth-section {
     display: flex;
     flex-direction: column;
+    justify-content: space-evenly;
     text-align: center;
-    margin: 2rem 0;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
 }
 
 .sixth-section h2 {
-    color: #034F78ff;
+    color: #41A3E0;
     font-size: 1.725rem;
 }
 
@@ -69,6 +71,7 @@
     text-align: left;
 }
 
+
 @media screen and (min-width: 768px) {
     .float-right {
         align-self: center;
@@ -79,7 +82,7 @@
     .sixth-section {
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: space-evenly;
     }
 
     .sixth-section .left-box {

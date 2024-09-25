@@ -54,13 +54,6 @@
     text-align: justify;
 }
 
-.wave-studio-container {
-    display: flex;
-    flex-direction: column;
-    position: relative;
-    padding-top: 3rem;
-}
-
 .half-width {
     width: 68%;
 }
@@ -68,13 +61,6 @@
 .wave-studio-container p {
     width: 100%;
     text-align: justify;
-}
-
-.wave-studio-container img {
-    width: 252px;
-    height: 254px;
-    position: absolute;
-    right: 0rem;
 }
 
 .see-more {
@@ -175,21 +161,11 @@
         top: -1rem;
     }
 
-    .centered-button {
-        display: block;
-        margin: 1rem auto;
-    }
-
 }
 
 @media screen and (min-width: 768px) {
     .section-wrapper {
         flex-wrap: wrap;
-    }
-
-    .centered-button {
-        display: block;
-        margin: unset;
     }
 }
 

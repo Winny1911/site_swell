@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLongArrowAltRight } from '@fortawesome/free-solid-svg-icons';
+import ArrowRight from '../../../assets/images/icons/arrow-right.png';
 
 import "./style.css";
 
@@ -44,7 +45,7 @@ const SixthSection = () => {
           <textarea className="form-control" rows="3" placeholder={t('Type your message here (optional)')}></textarea>
         </div>
         <button type="submit" className="btn btn-primary btn-primary-light float-right text-uppercase mt-3">
-          {t('Send')} <FontAwesomeIcon icon={faLongArrowAltRight} />
+          {t('Send')} <img src={ArrowRight} className='ml-2 mt-[1px]'/>
         </button>
       </form>
     </div>

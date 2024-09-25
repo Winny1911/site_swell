@@ -1,5 +1,5 @@
 import React from 'react';
-import WhatsappIcon from '../../assets/images/whatsapp-icon.png';
+import WhatsappIcon from '../../assets/images/icons/whatsapp-icon.png';
 
 const WhatsAppLink = () => {
   return (

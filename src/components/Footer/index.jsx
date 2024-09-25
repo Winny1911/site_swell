@@ -43,6 +43,10 @@ const Footer = () => {
       <hr style={{ borderTop: '2px solid white' }} />
       <div className="row terms-and-socials">
         <div className="col-6 d-flex gap-6 font-color">
+          <div className='flex flex-col' style={{ fontSize: '12px', textAlign: 'left' }}>
+          <p className='mb-1'>Copyright © Swell IT Solutions</p>
+          <p>2024</p>
+          </div>
           <a className="text-white text-size-12" href="/politica_privacidade.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '12ax' }}>{t('privPol')}</a>
           <p className='text-size-12'>{t('cookiesPol')}</p>
         </div>
@@ -57,9 +61,6 @@ const Footer = () => {
             <FontAwesomeIcon icon={faFacebook} size="lg" />
           </a>
         </div>
-      </div>
-      <div className="row font-color">
-        <p style={{ fontSize: '12px', textAlign: 'left' }}>Copyright © Swell IT Solutions 2024</p>
       </div>
     </footer>
   );

@@ -51,16 +51,16 @@ const SecondSection = () => {
   return (
     <div id="wavestudio" className="second-section">
       <div className="wave-studio container small-container">
-        <div className='wave-studio-container'>
-          <h2 className='white-text'>{t('Wave Studio')}</h2>
+        <div className='flex flex-col lg:flex-row items-center justify-between pt-12 lg:px-[12em]'>
           <div className='half-width'>
+            <h2 className='white-text'>{t('Wave Studio')}</h2>
             <p>{t('waveStudioDescription')}</p>
-              <button className="centered-button know-button" onClick={handleClickWave}>
-                {t('See More')}
-              </button>
           </div>
           <img src={WaveStudio} alt={t('waveStudioImageAlt')} />
         </div>
+            <button className="centered-button know-button" onClick={handleClickWave}>
+              {t('See More')}
+            </button>
       </div>
 
       <div className="section-wrapper">

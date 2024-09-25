@@ -26,17 +26,17 @@ const FirstSection = () => {
   return (
     <div className="homepage-section">
       <div className="right-div">
-        <div className="carousel-wrapper">
+        <div className='carousel-div'>
           <Slider {...settings}>
             <div className="carousel-item cursor-pointer" onClick={handleClick}>
-              <CarrouselCard className="" alt="card informando sobre pagamentos" />
+              <CarrouselCard className="rounded-[15px]" alt="card informando sobre pagamentos" />
             </div>
           </Slider>
         </div>
       </div>
         <div className="left-div">
           <h2>{t('swell_title')}</h2>
-          <p>{t('swell_description')}</p>
+          <p className='lg:w-[400px]'>{t('swell_description')}</p>
           <button className="know-button" onClick={handleClick}>
             {t('know_button')}
           </button>

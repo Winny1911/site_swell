@@ -22,7 +22,7 @@ const FourthSection = () => {
       {rows.map((rowImages, rowIndex) => (
         <div
           key={rowIndex}
-          className={`row white-space ${getRowDirection(rowIndex)} ${hoveredRow === rowIndex ? 'paused' : ''}`}
+          className={`gap-12 row white-space ${getRowDirection(rowIndex)} ${hoveredRow === rowIndex ? 'paused' : ''}`}
           onMouseEnter={() => setHoveredRow(rowIndex)}
           onMouseLeave={() => setHoveredRow(null)}
         >
