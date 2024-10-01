@@ -45,7 +45,7 @@ const SecondSection = () => {
 
 
   const handleClickWave = () => {
-    navigate('/about');
+    navigate('/wave');
   };
 
   return (

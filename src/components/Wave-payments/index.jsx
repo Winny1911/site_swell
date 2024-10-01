@@ -7,18 +7,24 @@ import './style.css';
 
 const WavePaymentsPage = () => {
   return (
-    <>
-      <div className="wave-payments-page">
-        <div className="container small-container">
-          <h2>Mais vantagem e competitividade de acordo com sua necessidade!</h2>
-          <ul>
+    <div>
+      <div className="flex flex-col justify-center">
+        <div className="bg-wave min-h-screen flex items-center justify-center px-4 -mb-[1rem]">
+          <div className="text-center items-center">
+              <h1 className="lg:text-8xl font-bold text-white">Wave Payments</h1>
+              <p className="text-4xl text-white mt-4">Centralize, Gerencie e Simplifique suas Transações.</p>
+          </div>
+        </div>
+        <div className="flex flex-col items-center justify-center linear-bg">
+          <h2 className='text-white text-center text-2xl'>Mais vantagem e competitividade de acordo com sua necessidade!</h2>
+          <ul className='text-white lg:w-[800px]'>
             <li>- Desenvolva APIs Personalizadas;</li>
             <li>- Integre pagamentos com Criptomoedas;</li>
             <li>- Permita transações rápidas sem inserir o cartão com Tap On;</li>
             <li>- Conte com serviços de Compliance e Gestão de Riscos;</li>
             <li>- Tenha seu próprio Hub de Pagamentos centralizado e realize a gestão de múltiplos métodos e serviços de pagamentos, permitindo que transações sejam processadas de forma eficiente, segura e simplificada.</li>
           </ul>
-          <img src={YourBusiness}  className="your-business-image pb-5" alt="Your Business Web" />
+          <img src={YourBusiness}  className="your-business-image pb-5 fit-content" alt="Your Business Web" />
         </div>
       </div>
       <div className="container small-container wave-payments-adquirement pt-5">
@@ -52,7 +58,7 @@ const WavePaymentsPage = () => {
           </ul>
         </div>
       </div>
-      <div className="container small-container digital-payments">
+      <div className="container small-container digital-payments flex-col">
         <img src={WavePaymentsDigital} className="pb-5" alt="device-showing-qr-code"/>
         <h3>PAGAMENTOS DIGITAIS</h3>
         <p className='pb-4'>Ofereça suporte a diversas formas de pagamento digital!</p>
@@ -81,7 +87,7 @@ const WavePaymentsPage = () => {
           Conte com nossos serviços para eliminar a complexidade e solucionar seus desafios de pagamentos
         </h5>
       </div>
-    </>
+    </div>
   );
 }
 

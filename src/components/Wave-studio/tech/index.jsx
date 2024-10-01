@@ -14,8 +14,8 @@ const WaveTech = () => {
   return (
     <>
         <div id="tech" style={{ background: 'linear-gradient(180deg, rgba(65, 163, 224, 0.94) 28.89%, rgba(160, 209, 240, 0.94) 53.75%, rgba(255, 255, 255, 0.94) 76.8%)' }}>
-            <div className='container d-flex items-center justify-center position-relative md:justify-end xl:justify-evenly'>
-                <img src={WaveStudioHome} alt="Wave Studio" className='md:absolute md:left-[-11rem] md:top-[-5rem] md:top-[-7rem] w-[1000px] '/>
+            <div className='container d-flex items-center justify-center position-relative md:justify-end xl:justify-evenly py-12'>
+                <img src={WaveStudioHome} alt="Wave Studio" className='md:absolute md:left-[-11rem] md:top-[-3rem] lg:top-[-5rem] w-[1000px] '/>
                 <div className='xl:w-[50%]'></div>
                 <div className='z-1'>
                     <h2 className='text-white text-7xl md:text-left md:pl-4'>Wave <br/> Tech</h2>
@@ -133,7 +133,7 @@ const WaveTech = () => {
 
                 <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />
 
-                <p className='text-2xl mt-12'>
+                <p className='text-2xl mt-12 pb-12'>
                     Pronto para transformar suas ideias em realidade? 
                     Entre em contato conosco hoje mesmo e descubra como a <strong className='text-primaryBlue'>Wave Tech</strong> pode impulsionar a inovação e o crescimento na sua organização.
                 </p>

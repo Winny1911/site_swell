@@ -14,8 +14,8 @@ const WaveStudio = () => {
   return (
     <>
         <div id="discovery" style={{ background: 'linear-gradient(180deg, rgba(65, 163, 224, 0.94) 28.89%, rgba(160, 209, 240, 0.94) 53.75%, rgba(255, 255, 255, 0.94) 76.8%)' }}>
-            <div className='container d-flex items-center justify-center position-relative md:justify-end xl:justify-evenly'>
-                <img src={WaveStudioHome} alt="Wave Studio" className='md:absolute md:left-[-11rem] md:top-[-5rem] md:top-[-7rem] w-[1000px] '/>
+            <div className='container d-flex items-center justify-center position-relative md:justify-end xl:justify-evenly py-12'>
+                <img src={WaveStudioHome} alt="Wave Studio" className='md:absolute md:left-[-11rem] md:top-[-3rem] lg:top-[-5rem] w-[1000px] '/>
                 <div className='xl:w-[50%]'></div>
                 <div className='z-1'>
                     <h2 className='text-white text-6xl md:text-7xl md:text-left md:pl-4'>Wave <br/> Discovery</h2>
@@ -37,7 +37,7 @@ const WaveStudio = () => {
             </div>
 
         </div>
-            <div className='container text-2xl'>
+            <div className='container text-2xl pb-12'>
                 <p className='' style={{ marginTop: '10rem' }}>Os principais benefícios da <strong>Wave Discovery</strong> são:</p>
                 <ul className='list-disc pl-10'>
                     <li>Alinhamento Organizacional.</li>
