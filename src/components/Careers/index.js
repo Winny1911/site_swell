@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import bannerCarreira from '../../assets/images/background-jobs.svg'
 import "./career-style.css"
 import "../Careers/style_work.css"
-import "../Footer/style.css"
+import "../ui/Footer/style.css"
 
 const loadScript = (src, type = 'text/javascript', defer = true) => {
     return new Promise((resolve, reject) => {

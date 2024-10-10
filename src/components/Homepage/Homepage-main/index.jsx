@@ -6,12 +6,14 @@ import ThirdSection from '../Homepage-third-section';
 import FourthSection from '../Homepage-fourth-section';
 import SixthSection from '../Homepage-sixth-section';
 import BoasVindasVideo from '../../../assets/BoasVindasVideo.mp4'
+import BoasVindasVideoWebm from '../../../assets/BoasVindasVideoWebm.webm'
 
 const HomepageMain = () => {
   return (
     <>
-      <video className="video-fill webkit-fill" autoPlay muted loop>
+      <video className="video-fill webkit-fill playsInline" autoPlay muted loop>
         <source src={BoasVindasVideo} type="video/mp4" />
+        <source src={BoasVindasVideoWebm} type="video/webm" />
         Your browser does not support the video tag.
       </video>
 
