@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import bannerCarreira from '../../assets/images/background-jobs.svg'
+import bannerCarreira from '../../assets/images/background-jobs-test.svg'
 import "./career-style.css"
 import "../Careers/style_work.css"
 import "../ui/Footer/style.css"
