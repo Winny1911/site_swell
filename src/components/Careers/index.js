@@ -127,7 +127,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="post" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="post" enctype="multipart/form-data"
                                         class="container gap-0" id="formAndroid">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -242,7 +242,7 @@ const CareerPage = () => {
 
                                 <!-- FORMULARIO -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formPessoaIOS">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -356,7 +356,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
 
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="post" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="post" enctype="multipart/form-data"
                                         class="container gap-0" id="contactForm">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -481,7 +481,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formFrontEnd">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -589,7 +589,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formIfra">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -703,7 +703,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formProgramadorSap">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -814,7 +814,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formDesenvolvedoraCSharp">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -924,7 +924,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formCloud">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1043,7 +1043,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formTableau">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1169,7 +1169,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formSap">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1291,7 +1291,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formPhp">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1415,7 +1415,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formGerente">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1544,7 +1544,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formGRC">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1662,7 +1662,7 @@ const CareerPage = () => {
                                         privacidade</a></p>
                                 <!-- formulário -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formBi">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1788,7 +1788,7 @@ const CareerPage = () => {
 
                                 <!-- FORMULARIO -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formMaster">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
@@ -1901,7 +1901,7 @@ const CareerPage = () => {
 
                                 <!-- FORMULARIO -->
                                 <div class="container">
-                                    <form action="/src/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
+                                    <form action="/mail/send_jobs.php" method="POST" enctype="multipart/form-data"
                                         class="container gap-0" id="formSalesforces">
                                         <div class="control-group col-sm-6 col-md-6 col-lg-6 col-xxl-6 mt-2">
                                             <div class="form-group">
