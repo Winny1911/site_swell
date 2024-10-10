@@ -1,0 +1,27 @@
+.third-section {
+    text-align: center;
+    margin-top: 5rem;
+}
+
+.third-section button {
+    margin-top: 10px;
+}
+
+
+
+.case-width {
+    width: 100%;
+}
+
+.know-button {
+    background-color: #201046ff;
+    border-radius: 5px;
+    padding: 4px 10px;
+    color: white;
+}
+
+@media screen and (min-width: 767px) {
+    .wave-tech h2 {
+        text-align: left;
+    }
+}

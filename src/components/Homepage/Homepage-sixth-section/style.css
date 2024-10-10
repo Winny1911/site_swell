@@ -1,0 +1,91 @@
+.sixth-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    text-align: center;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+
+.sixth-section h2 {
+    color: #41A3E0;
+    font-size: 1.725rem;
+}
+
+.text-underline {
+    text-decoration: underline;
+}
+
+.contact-form {
+    padding: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+
+    background-color: #1A1449;
+    border-radius: 20px;
+}
+
+.form-control {
+    background-color: #f1f1f1;
+    border-radius: 6px;
+}
+
+.form-control::placeholder {
+    color:rgba(59, 83, 129, 0.808);
+    font-size: 0.875rem;
+}
+
+.contact-form input, .form-group textarea {
+    border: 1px solid rgb(103, 164, 214);
+}
+
+.form-row {
+    display: flex;
+    margin-bottom: 6px;
+    gap: 3px;
+}
+
+.form-group {
+    margin-bottom: 6px;
+}
+
+.float-right {
+    background-color: #201046ff;
+    border-radius: 15px;
+    border: none;
+    text-wrap: nowrap;
+    font-weight: bold;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.btn .svg-inline--fa {
+    margin-left: 10px;
+}
+
+.small-text {
+    font-size: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+
+@media screen and (min-width: 768px) {
+    .float-right {
+        align-self: center;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .sixth-section {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .sixth-section .left-box {
+        width: 387px;
+    }
+}

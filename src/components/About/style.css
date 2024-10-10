@@ -18,10 +18,22 @@
     gap: unset;
 }
 
+.pd-0 {
+    padding: unset;
+}
+
 .center-div {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.background-blue {
+    background-color: #41A3E0;
 }
 
 @media screen and (max-width: 767px) {

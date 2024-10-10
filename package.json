@@ -4,6 +4,7 @@
   "homepage": "https://swellitnovo.com.br",
   "private": true,
   "dependencies": {
+    "@fortawesome/fontawesome-free": "^6.6.0",
     "@fortawesome/fontawesome-svg-core": "^6.5.1",
     "@fortawesome/free-brands-svg-icons": "^6.5.1",
     "@fortawesome/free-solid-svg-icons": "^6.5.1",
@@ -12,8 +13,10 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "bootstrap": "^5.3.3",
+    "caniuse-lite": "^1.0.30001660",
     "i18next": "^23.12.2",
     "i18next-browser-languagedetector": "^7.2.1",
+    "jquery": "^3.7.1",
     "react": "^18.2.0",
     "react-bootstrap": "^2.10.2",
     "react-dom": "^18.2.0",
@@ -22,6 +25,7 @@
     "react-scripts": "5.0.1",
     "react-slick": "^0.30.2",
     "slick-carousel": "^1.8.1",
+    "swiper": "^11.1.9",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -34,7 +38,11 @@
     "extends": [
       "react-app",
       "react-app/jest"
-    ]
+    ],
+    "globals": {
+      "$": "readonly",
+      "jQuery": "readonly"
+    }
   },
   "browserslist": {
     "production": [
@@ -50,6 +58,9 @@
   },
   "devDependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.21.11",
-    "prettier": "^3.2.5"
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "prettier": "^3.2.5",
+    "tailwindcss": "^3.4.12"
   }
 }

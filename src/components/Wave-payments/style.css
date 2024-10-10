@@ -1,0 +1,72 @@
+.linear-bg {
+    background-image: url(../../assets/images/wave-payments/linear-background-blue.png);
+    background-size: cover;
+    background-position: top;
+    background-repeat: no-repeat;
+}
+.wave-payments-page .container.small-container {
+    text-align: left;
+    padding: 7rem 20px 20px 20px;
+    border-radius: 10px;
+}
+
+.wave-payments-subadquirement h3, .wave-payments-adquirement h3, .digital-payments h3 {
+    font-size: 1.6rem;
+    margin-bottom: 1rem;
+    color: #1A1449;
+}
+
+.wave-payments-page ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 2rem 0;
+}
+
+.wave-payments-page ul li {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.wave-payments-page.your-business-image {
+    width: 80%;
+    max-width: 500px;
+    height: auto;
+    margin-top: 2rem;
+    align-self: center;
+}
+
+
+.wave-payments-adquirement {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}    
+
+.wave-payments-adquirement img, .wave-payments-subadquirement img, .digital-payments img {
+    width: 50%;
+}    
+
+.wave-payments-subadquirement {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+}
+
+.digital-payments {
+    display: flex;
+    align-items: center;
+    gap: 0rem;
+    color: #1A1449 !important;
+}
+
+.digital-payments li {
+    padding: .3rem;
+}
+
+.digital-footer {
+    color: #41a3e0;
+    text-align: center;
+    font-size: 17px;
+}

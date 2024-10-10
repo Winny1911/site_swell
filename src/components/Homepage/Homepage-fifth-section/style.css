@@ -1,0 +1,59 @@
+.carousel-wrapper {
+    border-radius: 15px;
+}
+
+.feedback-wrap {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    color: white;
+    width: 33rem;
+    height: 16rem;
+    background-color: #ffffff;
+    margin: 0 auto;
+}
+
+.align-self-right {
+    align-self: flex-start;
+}
+
+.blue-background {
+    background-color: #41A3E0;
+}
+
+.blue-title {
+    color: #41A3E0;
+}
+
+.company-name {
+    color: #ffffff;
+}
+
+.company-testemony {
+    color: #ffffff;
+}
+
+.feedback {
+    display: flex !important;
+    flex-direction: column;
+
+    gap: 10px;
+    padding: 1.5rem;
+}
+
+.fifth-section .slick-slider {
+    width: 100%;
+    height: 16rem;
+}
+
+.slick-track, .slick-list {
+    height: 100%;
+}
+
+.fifth-section .slick-next, .fifth-section .slick-prev {
+    width: 0px;
+}
+
+@media screen and (max-width: 575px) {
+    .feedback-wrap {
+        width: 100%;
+    }
+}

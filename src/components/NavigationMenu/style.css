@@ -20,6 +20,12 @@
 .icons {
   width: 42px;
   cursor: pointer;
+  z-index: 2;
+}
+
+.white-logo {
+  width: 60px;
+  z-index: 2;
 }
 
 .side-menu {
@@ -36,6 +42,7 @@
   padding-top: 2rem;
   transition: transform 0.3s ease-in-out;
   z-index: 999;
+  opacity: 0.92;
 }
 
 .side-menu.active {
@@ -71,7 +78,7 @@
 
 .side-menu a {
   color: #41A3E0;
-  text-decoration: none;
+  text-decoration: none !important;
   font-size: 1.2rem;
 }
 
@@ -92,21 +99,24 @@
 }
 
 .language-menu-container.show {
-  opacity: 1; /* Fade in the element */
-  transform: translateY(0); /* Move to its original position */
-  visibility: visible; /* Make the element visible */
+  opacity: 1; 
+  transform: translateY(0);
+  visibility: visible; 
 }
 
 .language-menu-container ul {
   list-style: none;
-  padding-left: 50%;
-   margin: 0;
+  padding-left: 44%;
+  padding-top: 25%;
+  margin: 0;
 }
 
 .language-menu-container li {
   margin: 5px 0;
   display: flex;
   align-items: center;
+  color: white;
+  cursor: pointer;
 }
 
 .language-menu-container img {
@@ -126,17 +136,23 @@
 }
 
 .language-menu-trigger.move-left {
-  transform: translateX(-1.5rem);
+  transform: translateX(-4.5rem);
 }
 
 .visibility-toggle.hidden {
   visibility: hidden;
-}
-
-.language-menu-container.show ~ .menu-icons .visibility-toggle {
-  visibility: hidden;
+  width: 0; 
+  height: 0;
+  overflow: hidden;
 }
 
 .menu-icons.language-menu-open .visibility-toggle {
+  visibility: hidden;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.language-menu-container.show ~ .menu-icons .visibility-toggle {
   visibility: hidden;
 }
