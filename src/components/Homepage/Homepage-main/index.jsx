@@ -12,7 +12,7 @@ const HomepageMain = () => {
   return (
     <>
       <video className="video-fill webkit-fill playsInline" autoPlay muted loop>
-        <source src={BoasVindasVideo} type="video/mp4" />
+        {/* <source src={BoasVindasVideo} type="video/mp4" /> */}
         <source src={BoasVindasVideoWebm} type="video/webm" />
         Your browser does not support the video tag.
       </video>
