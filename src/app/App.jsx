@@ -1,14 +1,14 @@
 import React from 'react';
 import '../assets/i18n.js';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import Footer from '../components/Footer/index.jsx';
-import HomepageMain from '../components/Homepage/Homepage-main/index.jsx';
-import NavigationMenu from '../components/NavigationMenu/index.jsx';
-import BackToTopButton from '../components/ScrollToTop/index.jsx';
-import About from '../components/About/index.jsx';
-import CareerPage from '../components/Careers/index.js';
-import WavePaymentsPage from '../components/Wave-payments/index.jsx';
-import WaveStudio from '../components/Wave-studio/index.jsx';
+import Footer from '../components/Footer';
+import HomepageMain from '../components/Homepage/Homepage-main';
+import NavigationMenu from '../components/NavigationMenu';
+import BackToTopButton from '../components/ScrollToTop';
+import About from '../components/About';
+import CareerPage from '../components/Careers';
+import WavePaymentsPage from '../components/Wave-payments';
+import WaveStudio from '../components/Wave-studio';
 
 function App() {
   return (
