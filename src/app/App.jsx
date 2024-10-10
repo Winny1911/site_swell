@@ -6,7 +6,7 @@ import HomepageMain from '../components/Homepage/Homepage-main/index.jsx';
 import NavigationMenu from '../components/NavigationMenu/index.jsx';
 import BackToTopButton from '../components/ScrollToTop/index.jsx';
 import About from '../components/About/index.jsx';
-import CareerPage from '../components/Careers/index.jsx';
+import CareerPage from '../components/Careers/index.js';
 import WavePaymentsPage from '../components/Wave-payments/index.jsx';
 import WaveStudio from '../components/Wave-studio/index.jsx';
 
