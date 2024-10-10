@@ -1,6 +1,6 @@
 // FIRST FORM DEVSECOPS JAVA
-const filedevSecopsJava = document.querySelector("#arquivoDevSecopsJava"); // input primeiro arquivo
-const curriculumDevSecopsJava = document.querySelector(".arquivo__picture"); // span primeiro arquivo
+const filedevSecopsJava = document.querySelector("#arquivoDevSecopsJava"); 
+const curriculumDevSecopsJava = document.querySelector(".arquivo__picture"); 
 const choiceArchive = "Escolha o arquivo";
 const arquivoText = "Selecione seu arquivo...";
 curriculumDevSecopsJava.innerHTML = arquivoText;
