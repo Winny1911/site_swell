@@ -1,9 +1,9 @@
 // FIRST FORM DEVSECOPS JAVA
 const filedevSecopsJava = document.querySelector("#arquivoDevSecopsJava"); 
-const curriculumDevSecopsJava = document.querySelector(".arquivo__picture"); 
+// const curriculumDevSecopsJava = document.querySelector(".arquivo__picture"); 
 const choiceArchive = "Escolha o arquivo";
-const arquivoText = "Selecione seu arquivo...";
-curriculumDevSecopsJava.innerHTML = arquivoText;
+// const arquivoText = "Selecione seu arquivo...";
+// curriculumDevSecopsJava.innerHTML = arquivoText;
 const message = document.getElementById("tamanhoExcedido");
 
 filedevSecopsJava.addEventListener("change", function (e) {
