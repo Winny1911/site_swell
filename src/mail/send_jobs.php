@@ -4,7 +4,7 @@
     use PHPMailer\PHPMailer\PHPMailer;
     use PHPMailer\PHPMailer\Exception;
     // Carregar o autoloader do composer
-    require '../vendor/autoload.php';
+    require './vendor/autoload.php';
 
     // send email for People (RECURSOS HUMANOS)
     function sendPeople($titleJob, $attachFile, $emailJobseeker)

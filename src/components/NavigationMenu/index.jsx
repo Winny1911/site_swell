@@ -39,14 +39,6 @@ const NavigationMenu = () => {
     i18n.changeLanguage(lng);
   };
 
-  const handleClick = (e) => {
-    e.preventDefault();
-    navigate('/');
-    setTimeout(() => {
-      document.getElementById('wavestudio').scrollIntoView({ behavior: 'smooth' });
-    }, 100); 
-  };
-
   const handleHomepageClick = (e) => {
     e.preventDefault();
     navigate('/'); 
