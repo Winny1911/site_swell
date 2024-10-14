@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import WaveStudioHome from '../../../assets/images/wave-studio/WaveBusinessHome.svg';
 import WaveSection from '../wave-items';
 import ContactButton from '../../ui/Contact-button';
-import ContactFormModal from '../../Contact-form';
+import ContactFormModal from '../../Contact-Modal';
 
 
 const WaveBusiness = () => {

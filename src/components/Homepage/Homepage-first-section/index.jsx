@@ -12,7 +12,7 @@ const FirstSection = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
-    navigate('/about');
+    navigate('/payments');
   };
 
   const settings = {

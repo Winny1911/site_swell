@@ -1,0 +1,36 @@
+.react-tel-input .form-control {
+    width: 100%;
+    border-radius: 6px;
+    height: unset;
+    line-height: 24px;
+}
+
+.react-tel-input .country-list {
+    width: 16.5em;
+}
+.react-tel-input .country-list .country {
+    text-align: left;
+}
+
+.react-tel-input .country-list .search-box {
+    width: 84%;
+}
+
+.react-tel-input .flag-dropdown.open .selected-flag, .react-tel-input .country-list {
+    border-radius: 6px;
+}
+
+.react-tel-input .flag-dropdown, .react-tel-input .flag-dropdown.open {
+    border-radius: 6px 0 0 6px;
+}
+
+.react-tel-input .country-list .search {
+    display: flex;
+}
+
+@media screen and (max-width: 1023px) {
+    .react-tel-input .country-list {
+        right: -7.5rem;
+        width: 300px;
+    }
+}

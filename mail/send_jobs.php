@@ -14,7 +14,7 @@
 
         try {
             // Configurações do servidor
-            $mail->isSMTP();        //Devine o uso de SMTP no envio
+            $mail->isSMTP();        //Define o uso de SMTP no envio
             $mail->SMTPAuth = false; //Habilita a autenticação SMTP
             $mail->Username   = 'no-reply@swellitsolutions.com.br';
             $mail->Host = 'mail.swellitsolutions.com.br';
@@ -22,7 +22,8 @@
             // Define o remetente
             $mail->setFrom('no-reply@swellitsolutions.com.br');
             // Define o destinatário
-            $mail->addAddress('vagas@swellitsolutions.com.br');
+            $mail->addAddress('amandard94@gmail.com');
+            // $mail->addAddress('vagas@swellitsolutions.com.br');
             // Conteúdo da mensagem
             $mail->isHTML(true);  // Seta o formato do e-mail para aceitar conteúdo HTML
             //$subjectEmail

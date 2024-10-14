@@ -51,7 +51,7 @@ const SecondSection = () => {
   return (
     <div id="wavestudio" className="second-section">
       <div className="wave-studio container small-container">
-        <div className='flex flex-col lg:flex-row items-center justify-between pt-12 lg:px-[12em]'>
+        <div className='flex flex-col lg:flex-row items-center justify-between pt-12 xl:px-[12em]'>
           <div className='half-width'>
             <h2 className='white-text'>{t('Wave Studio')}</h2>
             <p>{t('waveStudioDescription')}</p>
@@ -63,7 +63,7 @@ const SecondSection = () => {
             </button>
       </div>
 
-      <div className="section-wrapper">
+      <div className="section-wrapper container">
         <div className="section discovery-section flex-adjust">
           <div>
             <h2>DISCOVERY</h2>

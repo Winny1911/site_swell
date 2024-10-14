@@ -30,7 +30,7 @@ const Footer = () => {
         </div>
         <div className="col-4 pt-lg no-margin">
             <div>
-                <p className='font-color'>RUA APÓSTOLOS, 82 - SL402</p>
+                <p className='font-color'>{t('RUA')} APÓSTOLOS, 82 - SL402</p>
                 <p className='font-color'>PALHOÇA - SANTA CATARINA</p>
             </div>
             <div className="pt-lg">

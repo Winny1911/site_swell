@@ -1,5 +1,6 @@
 import i18n from 'i18next';
 import { initReactI18next } from 'react-i18next';
+import LanguageDetector from 'i18next-browser-languagedetector';
 
 const resources = {
   en: {
@@ -54,6 +55,12 @@ const resources = {
       "apaixonadas para se juntar à equipe.": "passionate people to join the team.",
       "privPol": "Privacy Policy",
       "cookiesPol": "Cookie Policy",
+      "RUA": "St",
+      "Contact": "CONTACT",
+      "Invalid email": "Invalid email" ,
+      "Invalid phone number": "Invalid phone number",
+      "Name is required": "Name is required",
+      "Company is required": "Company is required", 
     }
   },
   pt: {
@@ -108,23 +115,29 @@ const resources = {
       "apaixonadas para se juntar à equipe.": "passionate people to join the team.",
       "privPol": "Política de Privacidade",
       "cookiesPol": "Política de Cookies",
+      "RUA": "RUA",
+      "Contact": "CONTATO",
+      "Invalid email": "Email inválido" ,
+      "Invalid phone number": "Número de telefone inválido",
+      "Name is required": "Nome é obrigatório",
+      "Company is required": "Nome da empresa obrigatório", 
     }
   },
   es: {
     translation: {
       "Home": "Comenzar",
-      "A Swell": "El oleaje",
-      "Wave Studio": "Estudio Onda",
-      "Wave AI": "Wave AI",
-      "Wave Payments": "Pagos por ola",
-      "Cases Swell": "Casos de oleaje",
-      "Carreiras Swell": "Carreras geniales",
+      "A Swell": "El Swell",
+      "Wave Studio": "Wave Estudio",
+      "Wave AI": "Wave Tecnología",
+      "Wave Payments": "Wave Pagos",
+      "Cases Swell": "Wave Negocios",
+      "Carreiras Swell": "Wave Talento",
       "Perfil": "Login",
       "swell_title": "Acerca de Swell",
       "swell_description": "Con más de 20 años de experiencia, hemos cultivado una comunidad de talento diverso, impulsada por la innovación y dedicada a brindar soluciones personalizadas. Nuestro viaje tecnológico está marcado por una evolución continua, donde cada avance nos acerca al mañana.",
       "know_button": "CONOCER",
       "waveStudioDescription": "Reunimos la experiencia de nuestros profesionales para crear un equipo multidisciplinario cuyos pilares son la cultura ágil, la personalización de procesos y la capacidad de generar valor. Nuestro enfoque es promover la mejora continua y ofrecer soluciones de negocio únicas en el mercado, sumando calidad a los productos y servicios digitales de nuestros clientes.",
-      "waveStudioImageAlt": "Círculo que contiene las cualidades del Wave Studio",
+      "waveStudioImageAlt": "Círculo que contiene las cualidades del Wave Wave Estudio",
       "See More": "VER MÁS",
       "clients": "Clientes",
       "DISCOVERY": "DESCUBRIMIENTO",
@@ -161,17 +174,23 @@ const resources = {
       "apaixonadas para se juntar à equipe.": "apasionadas para unirse al equipo.",
       "privPol": "Política de privacidad",
       "cookiesPol": "Política de cookies",
+      "RUA": "Calle",
+      "Contact": "CONTACTO",
+      "Invalid email": "Correo electrónico inválido",
+      "Invalid phone number": "Número de teléfono inválido",
+      "Name is required": "El nombre es obligatorio",
+      "Company is required": "La empresa es obligatoria", 
     }
   },
   jp: {
     translation: {
       "Home": "始める",
-      "A Swell": "ザ・スウェル",
+      "A Swell": "ザ・すえる",
       "Wave Studio": "オンダスタジオ",
       "Wave AI": "AIウェーブ",
       "Wave Payments": "ウェーブペイメント",
       "Cases Swell": "膨れの場合",
-      "Carreiras Swell": "スウェルキャリア",
+      "Carreiras Swell": "すえるキャリア",
       "Perfil": "ログイン",
       "swell_title": "Swellについて",
       "swell_description": "20 年以上の経験により、当社はイノベーションを推進し、カスタマイズされたソリューションの提供に専念する、多様な才能を持つコミュニティを育成してきました。私たちのテクノロジーの旅は継続的な進化を特徴とし、進歩するたびに私たちは明日に近づきます。",
@@ -214,20 +233,31 @@ const resources = {
       "apaixonadas para se juntar à equipe.": "情熱的でチームに加わりたい人々。",
       "privPol": "プライバシーポリシー",
       "cookiesPol": "クッキーポリシー",
+      "RUA": "通り",
+      "Contact": "連絡先",
+      "Invalid email": "無効なメールアドレス",
+      "Invalid phone": "無効な電話番号",
+      "Name is required": "名前は必須です",
+      "Company is required": "会社名は必須です",
     }
   },
   // Add other languages here
 };
 
 i18n
+  .use(LanguageDetector) 
   .use(initReactI18next)
   .init({
     resources,
-    lng: 'pt', 
     fallbackLng: 'pt',
+    detection: {
+      order: ['localStorage', 'navigator', 'htmlTag', 'path', 'subdomain'],
+      caches: ['localStorage'] 
+    },
     interpolation: {
       escapeValue: false
     }
   });
+
 
 export default i18n;
