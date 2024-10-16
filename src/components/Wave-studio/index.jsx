@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 import WaveStudioWheel from '../../assets/images/wave-studio/wave-studio-transparent.svg';  
 import WaveStudioFlux from '../../assets/images/wave-studio/WaveStudioIlustracao.svg';
@@ -10,6 +10,8 @@ import WaveBusiness from './business';
 import WaveTalent from './talent';
 
 const WaveStudio = () => {
+  const [activeComponent, setActiveComponent] = useState(null);
+
   return (
     <div>
         <div className="bg-wave min-h-screen flex items-center justify-center px-4">
@@ -32,17 +34,43 @@ const WaveStudio = () => {
           <img src={WaveStudioFlux} alt="Wave Studio" className='mx-auto w-[1400px] mb-12 -mt-2 md:-mt-4 lg:-mt-8'/>
         </div>
 
-        <WaveDiscovery />
+        <div id="scrollTarget"></div>
+        
+        {/* Wave Discovery */}
+      <div
+        id="discovery"
+        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'discovery' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+      >
+        <WaveDiscovery setActiveComponent={setActiveComponent} />
+      </div>
 
-        <WaveTech />
+      {/* Wave Tech */}
+      <div
+        id="tech"
+        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'tech' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+      >
+        <WaveTech setActiveComponent={setActiveComponent} />
+      </div>
 
-        <WaveBusiness />
+      {/* Wave Business */}
+      <div
+        id="business"
+        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'business' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+      >
+        <WaveBusiness setActiveComponent={setActiveComponent} />
+      </div>
 
-        <WaveTalent />
+      {/* Wave Talent */}
+      <div
+        id="talent"
+        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'talent' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+      >
+        <WaveTalent setActiveComponent={setActiveComponent} />
+      </div>
 
-        <div>
-         <img src={WaveTalentIllustration} alt="Wave Studio" className='mx-auto w-[300px]'/>
-        </div>
+      <div>
+        <img src={WaveTalentIllustration} alt="Wave Studio" className='mx-auto w-[300px]'/>
+      </div>
 
     </div>
   );
