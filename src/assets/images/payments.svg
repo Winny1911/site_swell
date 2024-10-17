@@ -74,10 +74,10 @@
       </g>
     </mask>
     <filter id="a" width="100%" height="100%" x="0%" y="0%">
-      <feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+      <feColorMatrix colorInterpolationFilters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
     </filter>
     <filter id="b" width="100%" height="100%" x="0%" y="0%">
-      <feColorMatrix color-interpolation-filters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"/>
+      <feColorMatrix colorInterpolationFilters="sRGB" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0.2126 0.7152 0.0722 0 0"/>
     </filter>
   </defs>
   <use xlink:href="#reuse-1"/>
