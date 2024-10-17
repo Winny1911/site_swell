@@ -47,7 +47,7 @@ const BusinessSvg = () => {
 
         <path
             d="M-90,0 C50,190,-5,280,-90,440 C-260,260,-260,180,-90,0 Z" 
-            fill="lightblue"
+            fill="transparent"
             style={{ cursor: 'pointer', transform: 'translateX(14rem)' }}
         />
 

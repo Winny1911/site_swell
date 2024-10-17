@@ -105,6 +105,15 @@ const TalentSvg = () => {
             </g>
             </g>
         </g>
+
+        <path
+            d="M90,0 C-50,190,5,280,90,440 C260,260,260,180,90,0 Z"
+            fill="transparent"
+            style={{ cursor: 'pointer' }}
+            transform="translate(50, -170) rotate(270, 175, 220)"
+        />
+
+
         </svg>
     )
 }

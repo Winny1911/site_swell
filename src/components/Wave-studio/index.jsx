@@ -8,12 +8,13 @@ import WaveDiscovery from './discovery';
 import WaveTech from './tech';
 import WaveBusiness from './business';
 import WaveTalent from './talent';
+import WaveButton from './wave-items/wave-buttons';
 
 const WaveStudio = () => {
   const [activeComponent, setActiveComponent] = useState(null);
 
   return (
-    <div>
+    <div className='relative'>
         <div className="bg-wave min-h-screen flex items-center justify-center px-4">
           <div className="text-center">
               <h1 className="text-8xl font-bold text-white">Wave Studio</h1>
@@ -35,13 +36,9 @@ const WaveStudio = () => {
         </div>
 
         <div id="scrollTarget"></div>
-        
-        {/* Wave Discovery */}
-      <div
-        id="discovery"
-        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'discovery' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
-      >
-        <WaveDiscovery setActiveComponent={setActiveComponent} />
+
+      <div className="opacity-0 absolute insivible top-0">
+        <WaveButton setActiveComponent={setActiveComponent} />
       </div>
 
       {/* Wave Tech */}
@@ -50,6 +47,14 @@ const WaveStudio = () => {
         className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'tech' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
       >
         <WaveTech setActiveComponent={setActiveComponent} />
+      </div>
+
+        {/* Wave Discovery */}
+        <div
+        id="discovery"
+        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'discovery' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+      >
+        <WaveDiscovery setActiveComponent={setActiveComponent} />
       </div>
 
       {/* Wave Business */}

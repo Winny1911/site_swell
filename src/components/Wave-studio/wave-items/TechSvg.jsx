@@ -31,7 +31,7 @@ const TechSVG = () => {
             
             <path
                 d="M90,0 C-50,190,5,280,90,440 C260,260,260,180,90,0 Z" 
-                fill="lightblue"
+                fill="transparent"
                 style={{ cursor: 'pointer' }}
             />
 
