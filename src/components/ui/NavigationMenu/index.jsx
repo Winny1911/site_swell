@@ -81,7 +81,7 @@ const NavigationMenu = () => {
           <li><Link to="/wave">{t('Wave Studio')}</Link></li>
           <li><Link to="/payments">{t('Wave Payments')}</Link></li>
           <li><Link to="/carreira">{t('Carreiras Swell')}</Link></li>
-          <li><Link to="#">{t('Login')}</Link></li>
+          <li><Link to="https://intranet.swellitsolutions.com.br/">{t('Login')}</Link></li>
         </ul>
       </div>
     </div>

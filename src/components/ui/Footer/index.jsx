@@ -24,7 +24,7 @@ const Footer = () => {
             </div>
             <div>
               <li><Link to="/payments">{t('Wave Payments')}</Link></li>
-              <li><Link to="#">{t('Perfil')}</Link></li>
+              <li><Link to="https://intranet.swellitsolutions.com.br/">{t('Perfil')}</Link></li>
             </div>
           </ul>
         </div>
