@@ -2,22 +2,18 @@ import React, { useState } from 'react';
 import WaveSection from '../wave-items/wave-section';
 import ContactButton from '../../ui/Contact-button';
 import ContactFormModal from '../../Contact-Modal';
-import WaveButton from '../wave-items/wave-buttons';
 
-
-const WaveDiscovery = ({ setActiveComponent }) => {
+const WaveDiscovery = () => {
     const [isModalOpen, setIsModalOpen] = useState(false);
 
-  const openModal = () => setIsModalOpen(true);
-  const closeModal = () => setIsModalOpen(false);
+    const openModal = () => setIsModalOpen(true);
+    const closeModal = () => setIsModalOpen(false);
 
   return (
     <>
         <div id="discovery" className="scrollUp" style={{ background: 'linear-gradient(180deg, rgba(65, 163, 224, 0.94) 28.89%, rgba(160, 209, 240, 0.94) 53.75%, rgba(255, 255, 255, 0.94) 76.8%)' }}>
             <div className='container d-flex items-center justify-center position-relative md:justify-end xl:justify-evenly py-12'>
-                
-                <WaveButton setActiveComponent={setActiveComponent} />
-                
+                                
                 <div className='xl:w-[50%]'></div>
                 
                 <div className='z-1'>

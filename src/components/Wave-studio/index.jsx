@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
 import WaveStudioWheel from '../../assets/images/wave-studio/wave-studio-transparent.svg';  
 import WaveStudioFlux from '../../assets/images/wave-studio/WaveStudioIlustracao.svg';
@@ -11,7 +11,20 @@ import WaveTalent from './talent';
 import WaveButton from './wave-items/wave-buttons';
 
 const WaveStudio = () => {
-  const [activeComponent, setActiveComponent] = useState(null);
+  const [activeComponent, setActiveComponent] = useState('discovery');
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    window.addEventListener('resize', handleResize);
+    handleResize();
+
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <div className='relative'>
@@ -37,40 +50,48 @@ const WaveStudio = () => {
 
         <div id="scrollTarget"></div>
 
-      <div className="opacity-0 absolute insivible top-0">
-        <WaveButton setActiveComponent={setActiveComponent} />
-      </div>
+        <div className="relative">
+          <div className="absolute w-[600px] left-[20%] lg:left-[30%] top-[0px] lg:top-[8rem] transform -translate-x-1/2 z-10">
+            <div className="md:block hidden">
+              <WaveButton setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
+           </div>
+          </div>
+        </div>
 
-      {/* Wave Tech */}
-      <div
-        id="tech"
-        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'tech' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
-      >
-        <WaveTech setActiveComponent={setActiveComponent} />
-      </div>
-
-        {/* Wave Discovery */}
         <div
         id="discovery"
-        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'discovery' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+        className={`transition-opacity duration-500 ease-in-out ${
+          isMobile || activeComponent === 'discovery' ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'
+        }`}
       >
-        <WaveDiscovery setActiveComponent={setActiveComponent} />
+        <WaveDiscovery setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
       </div>
 
-      {/* Wave Business */}
+      <div
+        id="tech"
+        className={`transition-opacity duration-500 ease-in-out ${
+          isMobile || activeComponent === 'tech' ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'
+        }`}
+      >
+        <WaveTech setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
+      </div>
+
       <div
         id="business"
-        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'business' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+        className={`transition-opacity duration-500 ease-in-out ${
+          isMobile || activeComponent === 'business' ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'
+        }`}
       >
-        <WaveBusiness setActiveComponent={setActiveComponent} />
+        <WaveBusiness setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
       </div>
 
-      {/* Wave Talent */}
       <div
         id="talent"
-        className={`transition-opacity duration-500 ease-in-out ${activeComponent === 'talent' || !activeComponent ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'}`}
+        className={`transition-opacity duration-500 ease-in-out ${
+          isMobile || activeComponent === 'talent' ? 'opacity-100 relative visible' : 'opacity-0 absolute invisible top-0'
+        }`}
       >
-        <WaveTalent setActiveComponent={setActiveComponent} />
+        <WaveTalent setActiveComponent={setActiveComponent} activeComponent={activeComponent} />
       </div>
 
       <div>

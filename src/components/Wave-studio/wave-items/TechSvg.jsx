@@ -1,6 +1,9 @@
 const TechSVG = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" width="260" viewBox="0 0 223.5 438.75" height="415" version="1.0">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 223.5 438.75" 
+        version="1.0"
+        className="w-full h-auto transform scale-30 lg:scale-50"
+        >
             <defs>
                 <clipPath id="c">
                 <path d="M0 .363h222.254v437.774H0Zm0 0" />

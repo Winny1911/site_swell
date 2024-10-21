@@ -1,6 +1,11 @@
 const DiscoverySvg = () => {
     return (
-        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" width="390" zoomAndPan="magnify" viewBox="0 0 450 227.999995" height="304" preserveAspectRatio="xMidYMid meet" version="1.0">
+        <svg xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink" 
+        viewBox="0 0 450 227.999995" 
+        className="w-full h-auto transform scale-50 lg:scale-100"
+        zoomAndPan="magnify" 
+        preserveAspectRatio="xMidYMid meet" 
+        version="1.0">
         <defs>
           <filter x="0%" y="0%" width="100%" height="100%" id="2b43e85c9c">
             <feColorMatrix values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0" colorInterpolationFilters="sRGB"/>
