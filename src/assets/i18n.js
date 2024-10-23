@@ -35,7 +35,7 @@ const resources = {
       "Company": "Company*",
       "Subject": "Subject*",
       "Type your message here (optional)": "Type your message here (optional)",
-      "Send": "Send",
+      "Send": "Contact Us",
       "The Controller of personal data is Swell IT Solutions. The data entered in the form will be processed solely and exclusively to maintain contact.": "The Controller of personal data is Swell IT Solutions. The data entered in the form will be processed solely and exclusively to maintain contact.",
       "You can withdraw any consent given at any time. For additional information or to exercise your rights, please visit the": "You can withdraw any consent given at any time. For additional information or to exercise your rights, please visit the",
       "privacy notice": "privacy notice",

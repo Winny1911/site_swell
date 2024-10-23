@@ -100,3 +100,10 @@ button {
   margin: 0 auto;
   max-width: 945px;
 }
+.accessibility-options {
+  background-color: #1A1449 !important;
+}
+
+.accessibility-options .fa-solid {
+  color: #41A3E0;
+}

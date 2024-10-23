@@ -147,7 +147,7 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
             className="flex self-center justify-center items-center w-fit py-2 px-3 rounded-2xl btn-primary btn-primary-light text-uppercase mt-3"
             disabled={isSubmitting}
         >
-            {isSubmitting ? t('Sending...') : t('Send')} <img src={ArrowRight} alt="Send arrow icon" className='ml-2'/>
+            {isSubmitting ? t('Sending...') : t('Solicite nosso contato')} <img src={ArrowRight} alt="Send arrow icon" className='ml-2'/>
         </button>
     </form>
   );

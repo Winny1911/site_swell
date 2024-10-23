@@ -16,6 +16,8 @@ import enFlag from '../../../assets/images/flags/usa-flag.svg';
 import esFlag from '../../../assets/images/flags/spain-flag.svg';
 import jpFlag from '../../../assets/images/flags/japan-flag.svg';
 import WhatsAppLink from '../WhatsappLink';
+import ReactVLibras from 'react-vlibras-plugin';
+
 
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -61,7 +63,7 @@ const NavigationMenu = () => {
       icon: "access",
       shape: "circle",
       position: {
-        bottom: { size: 200 },
+        bottom: { size: 400 },
         left: { size: 20 },
         toRight: false,
       },
@@ -80,9 +82,10 @@ const NavigationMenu = () => {
             <WhatsAppLink />
         </div>
 
-        <div onClick={toggleLibrasMenu} className={`language-menu-trigger ${languageMenuOpen ? 'hidden' : ''}`}>
+        <ReactVLibras />
+        {/* <div onClick={toggleLibrasMenu} className={`language-menu-trigger ${languageMenuOpen ? 'hidden' : ''}`}>
           <img src={librasMenuOpen ? openLibrasIcon : closedLibrasIcon} className="icons" alt="Acessibility menu icon" />
-        </div>
+          </div> */}
 
         <div onClick={toggleLanguageMenu} className={`language-menu-trigger ${languageMenuOpen ? 'move-left' : ''}`}>
           <img src={languageMenuOpen ? openLanguageIcon : closedLanguageIcon} className="icons" alt="Language menu icon" />

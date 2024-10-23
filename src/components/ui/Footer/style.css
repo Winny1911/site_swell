@@ -53,8 +53,8 @@ footer hr {
     padding-right: 7rem;
 }
 
-.list-hk-darkblue li a {
-    font-family: 'HKGrotesk-Light', sans-serif;
+.list-hk-darkblue, .list-hk-darkblue li a {
+    font-family: 'HKGrotesk-Light', sans-serif !important;
     color: #1A1449 !important;
 }
 
