@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import WaveSection from '../wave-items/wave-section';
-import ContactButton from '../../ui/Contact-button';
+import ContactButton from '../../ui/ContactButton';
 import ContactFormModal from '../../Contact-Modal';
 
 const WaveDiscovery = () => {

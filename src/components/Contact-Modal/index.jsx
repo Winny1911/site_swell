@@ -4,7 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faTimes } from '@fortawesome/free-solid-svg-icons';
 import 'react-phone-input-2/lib/style.css'; 
 import './style.css'; 
-import ContactForm from '../ui/Contact-form';
+import ContactForm from '../ui/ContactForm';
 
 
 const ContactFormModal = ({ isOpen, onClose }) => {

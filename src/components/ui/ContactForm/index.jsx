@@ -85,8 +85,8 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
   return (
     <form className="contact-form" onSubmit={handleSubmit}>
         <h2 className='text-white pb-2'>{t('Contact')}</h2>
-        <div className="form-row">
-            <div className="form-group col-md-6">
+        <div className="flex flex-col md:flex-row gap-2">
+            <div className="form-group w-full">
             <input 
                 type="text"
                 className="form-control"
@@ -97,7 +97,7 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
                 required 
             />
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group w-full">
             <PhoneInput
                 country={'br'}
                 value={formData.phone}
@@ -109,8 +109,8 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
             {errors.phone && <div className="invalid-feedback">{errors.phone}</div>}
             </div>
         </div>
-        <div className="form-row">
-            <div className="form-group col-md-6">
+        <div className="flex flex-col md:flex-row gap-2">
+            <div className="form-group w-full">
             <input 
                 type="email"
                 className={`form-control ${errors.email && 'is-invalid'}`}
@@ -122,7 +122,7 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
             />
             {errors.email && <div className="invalid-feedback">{errors.email}</div>}
             </div>
-            <div className="form-group col-md-6">
+            <div className="form-group w-full">
             <input type="text"
                 className="form-control"
                 name="company"
@@ -144,7 +144,7 @@ const ContactForm = ({ formData, setFormData, setSuccessMessage, setErrorMessage
         </div>
         <button 
             type="submit" 
-            className="btn btn-primary btn-primary-light float-right text-uppercase mt-3"
+            className="flex self-center justify-center items-center w-fit py-2 px-3 rounded-2xl btn-primary btn-primary-light text-uppercase mt-3"
             disabled={isSubmitting}
         >
             {isSubmitting ? t('Sending...') : t('Send')} <img src={ArrowRight} alt="Send arrow icon" className='ml-2'/>

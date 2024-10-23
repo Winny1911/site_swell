@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { useTranslation } from 'react-i18next';
 
 import "./style.css";
-import ContactForm from '../../ui/Contact-form';
+import ContactForm from '../../ui/ContactForm';
 
 const SixthSection = () => {
   const { t } = useTranslation();
