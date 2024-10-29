@@ -102,8 +102,25 @@ button {
 }
 .accessibility-options {
   background-color: #1A1449 !important;
+  right: 1vw !important;
+  bottom: -20vh !important;
+  z-index: 9147483647 !important;
+}
+
+div[vw].enabled {
+  z-index: 9999 !important;
+}
+
+.accessibility-menu {
+  transform: translateY(calc(20% - (-5px)));
 }
 
 .accessibility-options .fa-solid {
   color: #41A3E0;
+}
+
+@media screen and (min-width: 2200px) {
+  .accessibility-menu {
+    transform: translateY(calc(-70% - 60px));
+  }
 }

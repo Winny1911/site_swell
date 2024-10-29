@@ -5,8 +5,6 @@ import { useTranslation } from 'react-i18next';
 import './style.css';
 import logo from '../../../assets/images/logo.png';
 import whiteLogo from '../../../assets/images/white-logo.png';
-import closedLibrasIcon from '../../../assets/images/icons/libras-black.png';
-import openLibrasIcon from '../../../assets/images/icons/libras-blue.png';
 import openMenuIcon from '../../../assets/images/icons/menu-blue-icon.png';
 import closedMenuIcon from '../../../assets/images/icons/menu-black-icon.png';
 import openLanguageIcon from '../../../assets/images/icons/language-blue-icon.png';
@@ -22,7 +20,6 @@ import ReactVLibras from 'react-vlibras-plugin';
 const NavigationMenu = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
-  const [librasMenuOpen, setLibrasMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
   const location = useLocation();
   const navigate = useNavigate();
@@ -36,13 +33,6 @@ const NavigationMenu = () => {
 
   const toggleLanguageMenu = () => {
     setLanguageMenuOpen(!languageMenuOpen);
-    if (menuOpen) {
-      setMenuOpen(false);
-    }
-  };
-
-  const toggleLibrasMenu = () => {
-    setLibrasMenuOpen(!librasMenuOpen);
     if (menuOpen) {
       setMenuOpen(false);
     }
@@ -63,12 +53,13 @@ const NavigationMenu = () => {
       icon: "access",
       shape: "circle",
       position: {
-        bottom: { size: 400 },
-        left: { size: 20 },
-        toRight: false,
+        bottom: { size: 340 },
+        left: { size: 9 },
+        toRight: true,
       },
     },
  }
+ 
 
   const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira' || location.pathname === '/wave') ? whiteLogo : logo;
   const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira' || location.pathname === '/wave') ? 'white-logo' : 'default-logo';
@@ -76,16 +67,16 @@ const NavigationMenu = () => {
   return (
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
       <img src={currentLogo} onClick={handleHomepageClick} className={`icons ${logoClassName}`} alt="Logo da Swell" />
+        
+      <ReactVLibras />
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
         <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
             <WhatsAppLink />
         </div>
 
-        <ReactVLibras />
-        {/* <div onClick={toggleLibrasMenu} className={`language-menu-trigger ${languageMenuOpen ? 'hidden' : ''}`}>
-          <img src={librasMenuOpen ? openLibrasIcon : closedLibrasIcon} className="icons" alt="Acessibility menu icon" />
-          </div> */}
+
+        <Accessibility Options={initOptions}/>
 
         <div onClick={toggleLanguageMenu} className={`language-menu-trigger ${languageMenuOpen ? 'move-left' : ''}`}>
           <img src={languageMenuOpen ? openLanguageIcon : closedLanguageIcon} className="icons" alt="Language menu icon" />
@@ -116,7 +107,6 @@ const NavigationMenu = () => {
         </ul>
       </div>
 
-      <Accessibility Options={initOptions}/>
     </div>
   );
 };
