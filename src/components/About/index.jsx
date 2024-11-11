@@ -24,7 +24,7 @@ const About = () => {
             <img src={SwellFlux} className="container img-fluid gap-0" alt="swell-flux" />
         </div>
 
-        <div className='container small-container pt-7 gap-0'>
+        <div className='container small-container pt-7 gap-0 text-justify h2-28'>
             <h2 className='mb-5'>{t('about_section1_title')}</h2>
 
             <p dangerouslySetInnerHTML={{ __html: t('about_section1') }} />

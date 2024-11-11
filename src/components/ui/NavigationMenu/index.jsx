@@ -16,8 +16,7 @@ import jpFlag from '../../../assets/images/flags/japan-flag.svg';
 import WhatsAppLink from '../WhatsappLink';
 import ReactVLibras from 'react-vlibras-plugin';
 
-
-const NavigationMenu = () => {
+const NavigationMenu = ({ setIgnoreScroll }) => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [languageMenuOpen, setLanguageMenuOpen] = useState(false);
   const { t, i18n } = useTranslation();
@@ -39,7 +38,13 @@ const NavigationMenu = () => {
   };
 
   const changeLanguage = (lng) => {
-    i18n.changeLanguage(lng);
+    if (lng === 'pt' && i18n.language !== 'pt') {
+      i18n.changeLanguage(lng).then(() => {
+        window.location.reload();
+      });
+    } else {
+      i18n.changeLanguage(lng); 
+    }
   };
 
   const handleHomepageClick = (e) => {
@@ -58,9 +63,8 @@ const NavigationMenu = () => {
         toRight: true,
       },
     },
- }
+  }
  
-
   const currentLogo = (location.pathname === '/payments' || location.pathname === '/carreira' || location.pathname === '/wave') ? whiteLogo : logo;
   const logoClassName = (location.pathname === '/payments' || location.pathname === '/carreira' || location.pathname === '/wave') ? 'white-logo' : 'default-logo';
 
@@ -68,13 +72,12 @@ const NavigationMenu = () => {
     <div className={`nav-menu ${menuOpen ? 'menu-open' : ''}`}>
       <img src={currentLogo} onClick={handleHomepageClick} className={`icons ${logoClassName}`} alt="Logo da Swell" />
         
-      <ReactVLibras />
+      {i18n.language === 'pt' && <ReactVLibras />}
 
       <div className={`menu-icons ${menuOpen ? 'menu-open' : ''}`}>
         <div onClick={toggleMenu} className={`visibility-toggle ${languageMenuOpen ? 'hidden' : ''}`}>
             <WhatsAppLink />
         </div>
-
 
         <Accessibility Options={initOptions}/>
 
@@ -88,7 +91,7 @@ const NavigationMenu = () => {
       </div>
 
       <div className={`language-menu-container ${languageMenuOpen ? 'show' : ''}`}>
-        <ul>
+        <ul className='text-white'>
           <li onClick={() => changeLanguage('pt')}><img src={ptFlag} alt="PT" /> PT</li>
           <li onClick={() => changeLanguage('en')}><img src={enFlag} alt="EN" /> EN</li>
           <li onClick={() => changeLanguage('es')}><img src={esFlag} alt="ES" /> ES</li>

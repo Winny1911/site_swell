@@ -1,4 +1,5 @@
 import React from 'react';
+import { ActiveComponentProvider } from '../context/ActiveComponentContext.jsx';
 import '../assets/i18n.js';
 import { BrowserRouter as Router, Route, Routes  } from 'react-router-dom';
 import Footer from '../components/ui/Footer';
@@ -11,26 +12,26 @@ import CareerPage from '../components/Careers';
 import WavePaymentsPage from '../components/Wave-payments';
 import WaveStudio from '../components/Wave-studio';
 
-
 function App() {
-
   return (
-    <Router>
-      <ScrollToTop />
+    <ActiveComponentProvider>
+      <Router>
+      <ScrollToTop  />
 
-      <div className="App">
-        <NavigationMenu />
-          <Routes>
-            <Route path="/" element={<HomepageMain />} />
-            <Route path="/about" element={<About />} />
-            <Route path="/carreira" element={<CareerPage />} />
-            <Route path="/payments" element={<WavePaymentsPage />} />
-            <Route path="/wave" element={<WaveStudio />} />
-          </Routes>
-        <Footer />
-        <BackToTopButton />
-      </div>
-    </Router>
+        <div className="App">
+          <NavigationMenu />
+            <Routes>
+              <Route path="/" element={<HomepageMain />} />
+              <Route path="/about" element={<About />} />
+              <Route path="/carreira" element={<CareerPage />} />
+              <Route path="/payments" element={<WavePaymentsPage />} />
+              <Route path="/wave" element={<WaveStudio />} />
+            </Routes>
+          <Footer />
+          <BackToTopButton />
+        </div>
+      </Router>
+    </ActiveComponentProvider>
   );
 }
 

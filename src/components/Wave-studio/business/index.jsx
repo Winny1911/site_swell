@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import WaveSection from '../wave-items/wave-section';
 import ContactButton from '../../ui/ContactButton';
 import ContactFormModal from '../../Contact-Modal';
+import { useTranslation } from 'react-i18next';
 
 const WaveBusiness = ({ setActiveComponent }) => {
+    const { t } = useTranslation();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
@@ -17,13 +20,13 @@ const WaveBusiness = ({ setActiveComponent }) => {
                 <div className='xl:w-[50%]'></div>
                 
                 <div className='z-1'>
-                    <h2 className='text-white text-7xl md:text-left md:pl-4'>Wave <br/> Business <br/> & Process</h2>
-                    <h4 className='text-3xl mt-3 md:text-left md:pl-4'>
+                    <h2 className='text-white text-[32px] px-4 md:text-left md:pl-4'>Wave Business <br/> & Process</h2>
+                    <h4 className='text-[28px] mt-3 md:text-left px-4 md:pl-4 hk-darkblue'>
                         Maximização de Resultados<br/>
                         e Inovação para Seu Negócio<br />
                     </h4>
 
-                    <p className='text-2xl text-justify mt-12 px-4 md:w-[430px]'>
+                    <p className='text-2xl text-justify mt-12 px-4 md:w-[470px]'>
                         Na <strong>Wave Business</strong>, combinamos conhecimento tecnológico de ponta com uma 
                         parceria estratégica para impulsionar a inovação, garantir a estabilidade 
                         e promover a transformação digital em todas as fases do ciclo de vida do software. 
@@ -32,8 +35,8 @@ const WaveBusiness = ({ setActiveComponent }) => {
                         concentre no core business enquanto nós cuidamos da tecnologia.
                     </p>
 
-                    <ContactButton onClick={openModal}>
-                            Solicite nosso contato
+                    <ContactButton onClick={openModal} className={"mx-4"}>
+                            {t('Send')}
                     </ContactButton>
                 </div>
             </div>
@@ -79,14 +82,14 @@ const WaveBusiness = ({ setActiveComponent }) => {
 
                 <br />
 
-                <p className='text-2xl'>
+                <p className='text-2xl text-justify'>
                     <strong>Termos de Contratação:</strong>{" "}
                     Os detalhes sobre termos e condições de contratação devem ser consultados diretamente conosco. 
                     Estamos aqui para fornecer todas as informações necessárias para que você tome a melhor decisão para o seu negócio.
                 </p>
 
                 <ContactButton onClick={openModal}>
-                        Solicite nosso contato
+                        {t('Send')}
                 </ContactButton>
 
                 <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />

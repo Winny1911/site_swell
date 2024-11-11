@@ -17,9 +17,9 @@ const SixthSection = () => {
   const [errorMessage, setErrorMessage] = useState('');
 
   return (
-    <div className="sixth-section">
+    <div className="sixth-section gap-6">
       <div className='left-box text-justify'>
-        <h2 style={{ fontWeight: 'bold' }}>{t('Transform Vision into Innovation with us!')}</h2>
+        <h2 className="mb-6" style={{ fontWeight: 'bold' }}>{t('Transform Vision into Innovation with us!')}</h2>
         <p style={{ marginBottom: 0 }}>{t('We are ready to boost your company\'s success!')}</p>
         <p>{t('Fill out the form below and allow our team to get in touch.')}</p>
         <p className="small-text text-justify">

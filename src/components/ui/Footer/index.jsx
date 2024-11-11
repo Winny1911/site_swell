@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import LogoFooter from '../../../assets/images/logo-footer.gif'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -8,6 +8,13 @@ import './style.css'
 
 const Footer = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+
+  const handleHomeClick = () => {
+    if (location.pathname === '/') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  };
   
   return (
     <footer>
@@ -18,7 +25,7 @@ const Footer = () => {
         <div className="col-4 d-flex justify-content-center pt-lg">
           <ul className='list-hk-darkblue small-screen'>
             <div>
-              <li><Link to="/">{t('Home')}</Link></li>
+              <li><Link to="/" onClick={handleHomeClick}>{t('Home')}</Link></li>
               <li><Link to="/about" >{t('A Swell')}</Link></li>
               <li><Link to="/wave">{t('Wave Studio')}</Link></li>
             </div>
@@ -48,7 +55,6 @@ const Footer = () => {
           <p>2024</p>
           </div>
           <a className="text-white text-size-12" href="/politica_privacidade.html" target="_blank" rel="noopener noreferrer" style={{ fontSize: '12ax' }}>{t('privPol')}</a>
-          <p className='text-size-12'>{t('cookiesPol')}</p>
         </div>
         <div className="col-6 icon-color font-color padding-right" style={{ textAlign: 'right' }}>
           <a className="text-white" href="https://www.instagram.com/swellitsolutions/" target="_blank" rel="noopener noreferrer">

@@ -12,6 +12,10 @@ const FirstSection = () => {
   const navigate = useNavigate();
 
   const handleClick = () => {
+    navigate('/about');
+  };
+
+  const handleClickPayments = () => {
     navigate('/payments');
   };
 
@@ -28,7 +32,7 @@ const FirstSection = () => {
       <div className="right-div">
         <div className='carousel-div'>
           <Slider {...settings}>
-            <div className="carousel-item cursor-pointer" onClick={handleClick}>
+            <div className="carousel-item cursor-pointer" onClick={handleClickPayments}>
               <CarrouselCard className="rounded-[15px]" alt="card informando sobre pagamentos" />
             </div>
           </Slider>

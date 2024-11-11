@@ -2,8 +2,11 @@ import React, { useState } from 'react';
 import WaveSection from '../wave-items/wave-section';
 import ContactButton from '../../ui/ContactButton';
 import ContactFormModal from '../../Contact-Modal';
+import { useTranslation } from 'react-i18next';
 
 const WaveTalent = ({ setActiveComponent }) => {
+    const { t } = useTranslation();
+
     const [isModalOpen, setIsModalOpen] = useState(false);
 
     const openModal = () => setIsModalOpen(true);
@@ -17,19 +20,19 @@ const WaveTalent = ({ setActiveComponent }) => {
                 <div className='xl:w-[50%]'></div>
                 
                 <div className='z-1'>
-                    <h2 className='text-white text-7xl md:text-left md:pl-4'>Wave <br/> Talent</h2>
-                    <h4 className='text-3xl mt-3 md:text-left md:pl-4'>
+                    <h2 className='text-white text-[32px] px-4 md:text-left md:pl-4'>Wave Talent</h2>
+                    <h4 className='text-[28px] mt-3 px-4 md:text-left md:pl-4 hk-darkblue'>
                         Potencialize o desempenho<br/>
                         e o crescimento do seu negócio.
                     </h4>
 
-                    <p className='text-2xl text-justify mt-12 px-4 md:w-[430px]'>
+                    <p className='text-2xl text-justify mt-12 px-4 md:w-[470px]'>
                         Encontre o melhor talento para o seu sucesso com <strong>Wave Talent</strong>. 
                         A nossa estratégia dinâmica de recrutamento garante o ajuste perfeito entre talento e organização.
                     </p>
 
-                    <ContactButton onClick={openModal}>
-                            Solicite nosso contato
+                    <ContactButton onClick={openModal} className={"mx-4"}>
+                            {t('Send')}
                     </ContactButton>
                 </div>
             </div>
@@ -51,8 +54,7 @@ const WaveTalent = ({ setActiveComponent }) => {
                     description="O melhor dos dois mundos: Nosso modelo de Shared Talent permite que as empresas 
                     beneficiem-se da flexibilidade e da segurança ao contratar talentos qualificados que 
                     são inicialmente alocados atuando no Cliente no formato Staff Augmentation, 
-                    após um período de avaliação acordado, o Cliente tem total liberdade para decidir pela internalização do profissional. 
-                    estratégicos:"
+                    após um período de avaliação acordado, o Cliente tem total liberdade para decidir pela internalização do profissional."
                     listItems={[
                         'Avaliação de Desempenho em Tempo Real.',
                         'Redução de Riscos de Contratação.',
@@ -69,7 +71,7 @@ const WaveTalent = ({ setActiveComponent }) => {
                     description="O Target Talent é a solução ideal para empresas que precisam de apoio especializado na identificação 
                     e contratação de talentos altamente qualificados. Identificamos e selecionamos os profissionais que melhor se 
                     encaixam nessas necessidades. Após a aprovação, os profissionais são contratados diretamente pelo Cliente, 
-                    sem necessidade de alocação prévia ou período de avaliação: robustas e viáveis:"
+                    sem necessidade de alocação prévia ou período de avaliação."
                     listItems={[
                         'Recrutamento Personalizado.',
                         'Foco na Excelência Profissional.',
@@ -81,14 +83,14 @@ const WaveTalent = ({ setActiveComponent }) => {
 
                 <br />
 
-                <p className='text-2xl'>
+                <p className='text-2xl text-justify'>
                     <strong>Termos de Contratação:</strong>{" "}
                     Os detalhes sobre termos e condições de contratação devem ser consultados diretamente conosco. 
                     Estamos aqui para fornecer todas as informações necessárias para que você tome a melhor decisão para o seu negócio.
                 </p>
 
                 <ContactButton onClick={openModal}>
-                    Solicite nosso contato
+                    {t('Send')}
                 </ContactButton>
 
                 <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />

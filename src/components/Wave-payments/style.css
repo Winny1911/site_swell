@@ -70,3 +70,12 @@
     text-align: center;
     font-size: 17px;
 }
+
+.defaultFontSize {
+    font-size: 28px !important;
+}
+
+ul li, .hk-light {
+    color: #1A1449 !important;
+    font-family: 'HKGrotesk-Medium', sans-serif;
+}
