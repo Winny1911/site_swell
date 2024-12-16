@@ -46,6 +46,7 @@ const WaveDiscovery = () => {
                 <p className='' style={{ marginTop: '10rem' }}>
                     {t('WaveStudio.Discovery.Benefits.Title')}
                     <strong>{t('WaveStudio.Discovery.Benefits.StrongPart')}</strong>
+                    {t('WaveStudio.Discovery.Benefits.Title.1')}
                 </p>
 
                 <ul className='list-disc pl-10'>
@@ -58,26 +59,26 @@ const WaveDiscovery = () => {
 
                 <p className='mt-12'>{t('WaveStudio.Discovery.Benefits.OperatingModel')}</p>
 
-                <WaveSection sectionKey="Exploration" />
+                <WaveSection type="Discovery" sectionKey="Model1" />
  
                 <br />
 
-                <WaveSection sectionKey="Abstraction" />
+                <WaveSection type="Discovery" sectionKey="Model2" />
 
                 <br />
 
-                <WaveSection sectionKey="Balance" />
+                <WaveSection type="Discovery" sectionKey="Model3" />
 
                 <br />
 
-                <WaveSection sectionKey="VisionRoadmap" />
+                <WaveSection type="Discovery" sectionKey="Model4" />
 
                 <br />
 
-                <WaveSection sectionKey="IntegratedBacklog" />
+                <WaveSection type="Discovery" sectionKey="Model5" />
 
                 <p className='text-2xl text-justify'>
-                    <strong>{t('WaveStudio.Discovery.ContractTerms.Title')}</strong> {t('WaveStudio.Discovery.ContractTerms.Description')}
+                    <strong>{t('WaveStudio.ContractTerms.Title')}</strong> {t('WaveStudio.ContractTerms.Description')}
                 </p>
 
 
@@ -87,10 +88,10 @@ const WaveDiscovery = () => {
 
                 <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />
 
-                <p className='text-2xl mt-12'>
-                    {t('WaveStudio.Discovery.ContactUs.Title')} <br />
-                    {t('WaveStudio.Discovery.ContactUs.Description')}
-                </p>
+                <p className='text-2xl mt-12'> {t('WaveStudio.Discovery.ContactUs.Title')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('WaveStudio.Discovery.ContactUs.Description')
+                    }}
+                />
 
             </div>
     </>

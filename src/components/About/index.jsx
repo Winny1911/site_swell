@@ -1,11 +1,28 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import BoasVindasVideo from '../../assets/BoasVindasVideo.mp4'
-import SwellFlux from '../../assets/images/nossa-historia-pt.gif'
+import SwellFluxPT from '../../assets/images/nossa-historia-pt.gif'
+import SwellFluxEN from '../../assets/images/nossa-historia-en.gif'
+import SwellFluxES from '../../assets/images/nossa-historia-es.gif'
+import SwellFluxJP from '../../assets/images/nossa-historia-jp.gif'
 import './style.css';
 
 const About = () => {
-  const { t } = useTranslation();
+  const { t, i18n  } = useTranslation();
+
+  const getImageForLanguage = (language) => {
+    switch (language) {
+      case 'en':
+        return SwellFluxEN;
+      case 'es':
+        return SwellFluxES;
+      case 'jp':
+        return SwellFluxJP;
+      case 'pt':
+      default:
+        return SwellFluxPT;
+    }
+  };
 
   return (
     <>
@@ -21,7 +38,11 @@ const About = () => {
         </div>
 
         <div className="section-wrapper section-width pd-0 background-blue">
-            <img src={SwellFlux} className="container img-fluid gap-0" alt="swell-flux" />
+            <img
+                src={getImageForLanguage(i18n.language)}
+                className="container img-fluid gap-0"
+                alt="swell-flux"
+            />
         </div>
 
         <div className='container small-container pt-7 gap-0 text-justify h2-28'>

@@ -4,7 +4,7 @@ import ContactButton from '../../ui/ContactButton';
 import ContactFormModal from '../../Contact-Modal';
 import { useTranslation } from 'react-i18next';
 
-const WaveTalent = ({ setActiveComponent }) => {
+const WaveTalent = () => {
     const { t } = useTranslation();
 
     const [isModalOpen, setIsModalOpen] = useState(false);
@@ -21,14 +21,16 @@ const WaveTalent = ({ setActiveComponent }) => {
                 
                 <div className='z-1'>
                     <h2 className='text-white text-[32px] px-4 md:text-left md:pl-4'>Wave Talent</h2>
-                    <h4 className='text-[28px] mt-3 px-4 md:text-left md:pl-4 hk-darkblue'>
-                        Potencialize o desempenho<br/>
-                        e o crescimento do seu negócio.
+                    <h4 className="text-[28px] mt-3 px-4 md:text-left md:pl-4 hk-darkblue">
+                    {   t('WaveStudio.Talent.TitlePart1')}
+                        <br />
+                    {   t('WaveStudio.Talent.TitlePart2')}
                     </h4>
 
-                    <p className='text-2xl text-justify mt-12 px-4 md:w-[470px]'>
-                        Encontre o melhor talento para o seu sucesso com <strong>Wave Talent</strong>. 
-                        A nossa estratégia dinâmica de recrutamento garante o ajuste perfeito entre talento e organização.
+                    <p className='text-2xl text-justify px-4 mt-12 md:w-[470px]'>
+                        {t('WaveStudio.Talent.Introduction.Part1')}
+                        <strong>{t('WaveStudio.Talent.Introduction.StrongPart')}</strong>
+                        {t('WaveStudio.Talent.Introduction.Part2')}
                     </p>
 
                     <ContactButton onClick={openModal} className={"mx-4"}>
@@ -38,55 +40,32 @@ const WaveTalent = ({ setActiveComponent }) => {
             </div>
 
         </div>
-            <div className='container text-2xl'>
-                <p className='' style={{ marginTop: '10rem' }}>Os principais benefícios da <strong>Wave Talent</strong> são:</p>
+            <div className='container text-2xl pb-12'>
+                <p className='' style={{ marginTop: '15rem' }}>
+                    {t('WaveStudio.Talent.Benefits.Title')}
+                    <strong>{t('WaveStudio.Talent.Benefits.StrongPart')}</strong>
+                    {t('WaveStudio.Talent.Benefits.Title.1')}
+                </p>
+                
                 <ul className='list-disc pl-10'>
-                    <li>Agilidade na contratação.</li>
-                    <li>Maior Aderência entre Profissional e Organização.</li>
-                    <li>Crescimento de Capital Intelectual.</li>
-                    <li>Aumento da Performance.</li>
+                    <li>{t('WaveStudio.Talent.Benefits.List0')}</li>
+                    <li>{t('WaveStudio.Talent.Benefits.List1')}</li>
+                    <li>{t('WaveStudio.Talent.Benefits.List2')}</li>
+                    <li>{t('WaveStudio.Talent.Benefits.List3')}</li>
                 </ul>
             
-                <p className='mt-12'>Modelos de contratação:</p>
+                <p className='mt-12'>{t('WaveStudio.Talent.Benefits.OperatingModel')}</p>
 
-                <WaveSection
-                    title="SHARED TALENT | Parceria Adaptada, Flexibilidade e  Eficiência"
-                    description="O melhor dos dois mundos: Nosso modelo de Shared Talent permite que as empresas 
-                    beneficiem-se da flexibilidade e da segurança ao contratar talentos qualificados que 
-                    são inicialmente alocados atuando no Cliente no formato Staff Augmentation, 
-                    após um período de avaliação acordado, o Cliente tem total liberdade para decidir pela internalização do profissional."
-                    listItems={[
-                        'Avaliação de Desempenho em Tempo Real.',
-                        'Redução de Riscos de Contratação.',
-                        'Suporte Swell para o desenvolvimento do Profissional.',
-                        'Adaptação às Necessidades do Projeto.',
-                        'Decisão Informada para Internalização.',
-                    ]}
-                />
-                
+                <WaveSection type="Talent" sectionKey="Model1" />
+ 
                 <br />
 
-                <WaveSection
-                    title="TARGET TALENT | Seleção Especializada"
-                    description="O Target Talent é a solução ideal para empresas que precisam de apoio especializado na identificação 
-                    e contratação de talentos altamente qualificados. Identificamos e selecionamos os profissionais que melhor se 
-                    encaixam nessas necessidades. Após a aprovação, os profissionais são contratados diretamente pelo Cliente, 
-                    sem necessidade de alocação prévia ou período de avaliação."
-                    listItems={[
-                        'Recrutamento Personalizado.',
-                        'Foco na Excelência Profissional.',
-                        'Redução do Tempo de Contratação.',
-                        'Consultoria e Suporte Durante a Seleção.',
-                        'Contratação Direta pelo Cliente.'
-                    ]}
-                />
+                <WaveSection type="Talent" sectionKey="Model2" />
 
                 <br />
 
                 <p className='text-2xl text-justify'>
-                    <strong>Termos de Contratação:</strong>{" "}
-                    Os detalhes sobre termos e condições de contratação devem ser consultados diretamente conosco. 
-                    Estamos aqui para fornecer todas as informações necessárias para que você tome a melhor decisão para o seu negócio.
+                    <strong>{t('WaveStudio.ContractTerms.Title')}</strong> {t('WaveStudio.ContractTerms.Description')}
                 </p>
 
                 <ContactButton onClick={openModal}>
@@ -95,10 +74,10 @@ const WaveTalent = ({ setActiveComponent }) => {
 
                 <ContactFormModal isOpen={isModalOpen} onClose={closeModal} />
 
-                <p className='text-2xl mt-12'>
-                    Pronto para transformar suas ideias em realidade? 
-                    Entre em contato conosco hoje mesmo e descubra como a <strong className='text-primaryBlue'>Wave Tech</strong> pode impulsionar a inovação e o crescimento na sua organização.
-                </p>
+                <p className='text-2xl mt-12'> {t('WaveStudio.Talent.ContactUs.Title')}</p>
+                <p dangerouslySetInnerHTML={{ __html: t('WaveStudio.Talent.ContactUs.Description')
+                    }}
+                />
             </div>
     </>
   );

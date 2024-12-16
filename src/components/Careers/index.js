@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react';
 import bannerCarreira from '../../assets/images/background-jobs-test.svg'
+import { useTranslation } from 'react-i18next';
+
 import "./career-style.css"
 import "../Careers/style_work.css"
 import "../ui/Footer/style.css"
 
 const loadScript = (src, type = 'text/javascript', defer = true) => {
+    
     return new Promise((resolve, reject) => {
         if (document.querySelector(`script[src="${src}"]`)) {
             resolve();
             return;
         }
-
+        
         const script = document.createElement('script');
         script.src = src;
         script.type = type;
@@ -22,6 +25,7 @@ const loadScript = (src, type = 'text/javascript', defer = true) => {
 };
 
 const CareerPage = () => {
+    const { t } = useTranslation();
     const [scriptsLoaded, setScriptsLoaded] = useState(false);
 
     useEffect(() => {
@@ -2023,8 +2027,8 @@ const CareerPage = () => {
         <div className="banner-container">
         <img src={bannerCarreira} className="banner-image" alt="carreiras swell" />
             <div className="banner-text">
-                <h2 className="banner-title">Carreiras Swell</h2>
-                <span className="banner-subtitle">Surfe as Melhores Oportunidades com a Swell.</span>
+                <h2 className="banner-title">{t('Carreiras Swell')}</h2>
+                <span className="banner-subtitle">{t("Carreiras.CareersDescription")}</span>
             </div>
         </div>
 

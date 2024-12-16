@@ -54,7 +54,7 @@ const SecondSection = () => {
       <div className="wave-studio container small-container">
         <div className='flex flex-col lg:flex-row items-center justify-between pt-12'>
           <div className='half-width'>
-            <h2 className='white-text'>{t('Wave Studio')}</h2>
+            <h2 className='white-text'>Wave Studio</h2>
             <p className='text-justify'>{t('waveStudioDescription')}</p>
           </div>
           <img src={WaveStudio} alt={t('waveStudioImageAlt')} />

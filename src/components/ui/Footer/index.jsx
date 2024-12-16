@@ -18,11 +18,11 @@ const Footer = () => {
   
   return (
     <footer>
-      <div className="row terms-and-socials">
-        <div className="col-4">
+      <div className="flex flex-col md:flex-row gap-4 lg:justify-around terms-and-socials">
+        <div className="md:col-4">
           <img src={LogoFooter} alt="Logo" className='w-100' />
         </div>
-        <div className="col-4 d-flex justify-content-center pt-lg">
+        <div className="md:col-4 d-flex justify-content-center pt-lg">
           <ul className='list-hk-darkblue small-screen'>
             <div>
               <li><Link to="/" onClick={handleHomeClick}>{t('Home')}</Link></li>
@@ -31,11 +31,11 @@ const Footer = () => {
             </div>
             <div>
               <li><Link to="/payments">{t('Wave Payments')}</Link></li>
-              <li><Link to="https://intranet.swellitsolutions.com.br/">{t('Perfil')}</Link></li>
+              <li><Link to="https://intranet.swellitsolutions.com.br/">{t('Login')}</Link></li>
             </div>
           </ul>
         </div>
-        <div className="col-4 pt-lg no-margin">
+        <div className="md:col-4 pt-lg no-margin">
             <div>
                 <p className='font-color'>{t('RUA')} APÓSTOLOS, 82 - SL402</p>
                 <p className='font-color'>PALHOÇA - SANTA CATARINA</p>

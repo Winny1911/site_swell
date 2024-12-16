@@ -1,7 +1,7 @@
 {
   "name": "swell-renew",
   "version": "0.1.0",
-  "homepage": "https://swellitnovo.com.br",
+  "homepage": "https://swellitsolutions.com.br",
   "private": true,
   "dependencies": {
     "@djpfs/react-vlibras": "^2.0.2",

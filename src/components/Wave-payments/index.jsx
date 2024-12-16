@@ -1,13 +1,35 @@
 import WavePaymentsAdquirent from '../../assets/images/wave-payments/adquirente.png';
 import WavePaymentsSubAdquirent from '../../assets/images/wave-payments/sub-adquirente.png';
 import WavePaymentsDigital from '../../assets/images/wave-payments/pagamentos-digitais-azul.png';
-import YourBusiness from '../../assets/images/wave-payments/pagamentos-digitais-branco.png';
+import YourBusiness from '../../assets/images/wave-payments/svgviewer-output.svg';
+import YourBusinessMobile from '../../assets/images/wave-payments/yourbsns.png';
+import GatewayImage from '../../assets/images/wave-payments/1.GatewayImage.svg'
+import CloudImage from '../../assets/images/wave-payments/2.CloudImage.svg'
+import BoletoImage from '../../assets/images/wave-payments/3.BoletoImage.svg'
+import TefWebImage from '../../assets/images/wave-payments/4.TefWebImage.svg'
+import PagamentoImage from '../../assets/images/wave-payments/5.PagamentoImage.svg'
+import AutomacaoImage from '../../assets/images/wave-payments/6.AutomaçãoImage.svg'
 
 import './style.css';
 import { useTranslation } from 'react-i18next';
+import MobileCard from './MobileCard';
+import { useEffect, useState } from 'react';
 
 const WavePaymentsPage = () => {
   const { t } = useTranslation();
+
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize(); 
+    window.addEventListener("resize", handleResize); 
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   return (
     <div>
@@ -27,7 +49,66 @@ const WavePaymentsPage = () => {
             <li>{t('WavePayments.Advantage4')}</li>
             <li>{t('WavePayments.Advantage5')}</li>
           </ul>
-          <img src={YourBusiness}  className="your-business-image pb-5 fit-content py-8" alt="Your Business Web" />
+
+          {!isMobile && (
+            <img
+              src={YourBusiness}
+              className="your-business-image pb-5 py-8"
+              alt="Your Business Web"
+            />
+          )}
+
+          {isMobile && (
+            <>
+              <img
+                src={YourBusinessMobile}
+                className="your-business-image pb-5 py-8"
+                alt="Your Business Web"
+              />
+              <MobileCard
+                title="GATEWAY"
+                imageSrc={GatewayImage}
+                imagePosition="right"
+                items={["Múltiplos métodos de Pagamentos;", "PCI DSS Compliant;", "Frame de Pagamento."]}
+              />
+
+              <MobileCard
+                title="BAIXA ONLINE / PIX / BITCOIN"
+                imageSrc={CloudImage}
+                imagePosition="left"
+                items={["Baixa de todas as formas de pagamentos no sistema faturador."]}
+              />
+
+              <MobileCard
+                title="BOLETO"
+                imageSrc={BoletoImage}
+                imagePosition="right"
+                items={["Gerar boleto online;", "Importar arquivo (boleto pago);", "Baixa de boleto via API;", "Gera relatório de boletos."]}
+              />
+
+              <MobileCard
+                title="TEF WEB"
+                imageSrc={TefWebImage}
+                imagePosition="left"
+                items={["Pagamento presencial com cartão de Débito e Crédito integrado com POS."]}
+              />
+
+              <MobileCard
+                title="SERVIÇOS DE AUTOMAÇÃO"
+                imageSrc={PagamentoImage}
+                imagePosition="right"
+                items={["Agendamento de pagamento;", "Gestão de recorrência."]}
+              />
+
+              <MobileCard
+                title="SERVIÇOS DE AUTOMAÇÃO"
+                imageSrc={AutomacaoImage}
+                imagePosition="left"
+                items={["Envio de SMS;", "Abertura de protocolo;", "Validação e Baixa de pagamentos online Mobile;", "Integração Pix, QR code, Copia e cola;", "Consulta de cadastro;", "Links de pagamentos;", "Integração eletrônica EDI legado e API."]}
+              />
+            </>
+          )}
+
         </div>
       </div>
       <div className="container small-container wave-payments-adquirement pt-5">
