@@ -1,7 +1,6 @@
 import WavePaymentsAdquirent from '../../assets/images/wave-payments/adquirente.png';
 import WavePaymentsSubAdquirent from '../../assets/images/wave-payments/sub-adquirente.png';
 import WavePaymentsDigital from '../../assets/images/wave-payments/pagamentos-digitais-azul.png';
-import YourBusiness from '../../assets/images/wave-payments/svgviewer-output.svg';
 import YourBusinessMobile from '../../assets/images/wave-payments/yourbsns.png';
 import GatewayImage from '../../assets/images/wave-payments/1.GatewayImage.svg'
 import CloudImage from '../../assets/images/wave-payments/2.CloudImage.svg'
@@ -10,13 +9,33 @@ import TefWebImage from '../../assets/images/wave-payments/4.TefWebImage.svg'
 import PagamentoImage from '../../assets/images/wave-payments/5.PagamentoImage.svg'
 import AutomacaoImage from '../../assets/images/wave-payments/6.AutomaçãoImage.svg'
 
+import YourBusinessPt from '../../assets/images/wave-payments/paymentsWebPt.svg';
+import YourBusinessEn from '../../assets/images/wave-payments/paymentsWebEn.svg';
+// import YourBusinessEs from '../../assets/images/wave-payments/paymentsWebEs.svg';
+import YourBusinessJp from '../../assets/images/wave-payments/paymentsWebJp.svg';
+
+
 import './style.css';
 import { useTranslation } from 'react-i18next';
 import MobileCard from './MobileCard';
 import { useEffect, useState } from 'react';
 
 const WavePaymentsPage = () => {
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
+
+  const getImageForLanguage = (language) => {
+    switch (language) {
+      case 'en':
+        return YourBusinessEn;
+      // case 'es':
+      //   return YourBusinessEs;
+      case 'jp':
+        return YourBusinessJp;
+      case 'pt':
+      default:
+        return YourBusinessPt;
+    }
+  };
 
   const [isMobile, setIsMobile] = useState(false);
 
@@ -52,9 +71,9 @@ const WavePaymentsPage = () => {
 
           {!isMobile && (
             <img
-              src={YourBusiness}
-              className="your-business-image pb-5 py-8"
-              alt="Your Business Web"
+              src={getImageForLanguage(i18n.language)}
+              className="container img-fluid gap-0"
+              alt="swell-flux"
             />
           )}
 
